@@ -2,7 +2,9 @@ use tauri::menu::{CheckMenuItemBuilder, Menu, MenuBuilder, MenuItemBuilder, Subm
 use tauri::tray::TrayIconBuilder;
 use tauri::{AppHandle, Manager, Wry};
 
-use crate::settings::{Fit, Layout, Monitors, Settings, StaticBackground, FILTERS, MODULES};
+use crate::settings::{
+    Fit, Layout, Monitors, Settings, StaticBackground, FILTERS, MODULES, RENDER_SCALES,
+};
 use crate::wallpaper::{self, AppState};
 
 pub const TRAY_ID: &str = "lcars-wallpaper";
@@ -204,9 +206,21 @@ pub fn build_menu(app: &AppHandle) -> tauri::Result<Menu<Wry>> {
         );
     }
 
+    // Fewer pixels to draw is the only way to make the animation itself
+    // cheaper; everything else can only stop it running.
+    let mut scale_menu = SubmenuBuilder::new(app, "Render quality");
+    for (label, value) in RENDER_SCALES {
+        scale_menu = scale_menu.item(
+            &CheckMenuItemBuilder::with_id(format!("render-scale:{value}"), label)
+                .checked((settings.render_scale() - value).abs() < 0.001)
+                .build(app)?,
+        );
+    }
+
     let appearance = SubmenuBuilder::new(app, "Appearance")
         .item(&margin_menu.build()?)
         .item(&filter_menu.build()?)
+        .item(&scale_menu.build()?)
         .item(&CheckMenuItemBuilder::with_id("red-alert", "Red alert").checked(settings.red_alert).build(app)?)
         .item(&CheckMenuItemBuilder::with_id("boot-animation", "Boot animation on start").checked(settings.boot_animation).build(app)?)
         .build()?;
@@ -264,7 +278,8 @@ pub fn build_menu(app: &AppHandle) -> tauri::Result<Menu<Wry>> {
         .build()?;
 
     let behaviour = SubmenuBuilder::new(app, "Behaviour")
-        .item(&CheckMenuItemBuilder::with_id("pause-fullscreen", "Pause while an app runs fullscreen").checked(settings.pause_on_fullscreen).build(app)?)
+        .item(&CheckMenuItemBuilder::with_id("pause-covered", "Pause while nothing of it is showing").checked(settings.pause_when_covered).build(app)?)
+        .item(&CheckMenuItemBuilder::with_id("pause-fullscreen", "Pause while an app runs fullscreen").checked(settings.pause_on_fullscreen).enabled(!settings.pause_when_covered).build(app)?)
         .item(&CheckMenuItemBuilder::with_id("system-info", "Live system readouts").checked(settings.system_info).build(app)?)
         .item(&shuffle_menu.build()?)
         .item(&CheckMenuItemBuilder::with_id("autostart", "Start with Windows").checked(crate::autostart_enabled(app)).build(app)?)
@@ -344,6 +359,13 @@ fn handle_menu_event(app: &AppHandle, event: tauri::menu::MenuEvent) {
             let enabled = !settings_of(&app).audio;
             update_settings(&app, |settings| settings.audio = enabled);
             apply_audio(&app, enabled);
+        }
+        "pause-covered" => {
+            let enabled = !settings_of(&app).pause_when_covered;
+            update_settings(&app, |settings| settings.pause_when_covered = enabled);
+            // Whatever the supervisor had hidden under the old rule has to come
+            // back before the new one gets a say.
+            wallpaper::set_paused(&app, false);
         }
         "pause-fullscreen" => {
             let enabled = !settings_of(&app).pause_on_fullscreen;
@@ -447,6 +469,19 @@ fn handle_parametrised_event(app: &AppHandle, id: &str) {
         let volume: f64 = value.parse().unwrap_or(0.12);
         update_settings(app, |settings| settings.engine_volume = volume);
         wallpaper::dispatch(app, None, "set-sbg-volume", volume.into());
+        return;
+    }
+
+    if let Some(value) = id.strip_prefix("render-scale:") {
+        let scale: f64 = value.parse().unwrap_or(1.0);
+        if (settings_of(app).render_scale() - scale).abs() < 0.001 {
+            return;
+        }
+
+        update_settings(app, |settings| settings.render_scale = scale);
+        // The split layout maps physical pixels to CSS ones through this, and
+        // the page has to be laid out again either way.
+        wallpaper::rebuild(app);
         return;
     }
 

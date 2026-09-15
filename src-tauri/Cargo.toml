@@ -1,6 +1,6 @@
 [package]
 name = "lcars-wallpaper"
-version = "1.0.0"
+version = "1.0.1"
 description = "LCARS animated Windows wallpaper"
 edition = "2021"
 rust-version = "1.82"
@@ -14,9 +14,15 @@ tauri-plugin-autostart = "2"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 sysinfo = "0.33"
+# Reaching the WebView2 controller behind each window: hiding the host HWND
+# leaves the browser rendering at full speed, so pausing has to go through
+# ICoreWebView2Controller itself.
+webview2-com = "0.38"
+windows-core = "0.61"
 windows-sys = { version = "0.59", features = [
     "Win32_Foundation",
     "Win32_UI_WindowsAndMessaging",
+    "Win32_Graphics_Dwm",
     "Win32_Graphics_Gdi",
 ] }
 

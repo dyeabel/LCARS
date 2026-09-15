@@ -15,15 +15,18 @@ use std::ffi::c_void;
 use std::thread;
 use std::time::{Duration, Instant};
 
-use windows_sys::Win32::Foundation::{BOOL, HWND, LPARAM, POINT, RECT, TRUE};
+use windows_sys::Win32::Foundation::{BOOL, FALSE, HWND, LPARAM, POINT, RECT, TRUE};
+use windows_sys::Win32::Graphics::Dwm::{DwmGetWindowAttribute, DWMWA_CLOAKED, DWMWA_EXTENDED_FRAME_BOUNDS};
 use windows_sys::Win32::Graphics::Gdi::{
-    GetMonitorInfoW, InvalidateRect, MonitorFromPoint, MONITORINFO, MONITOR_DEFAULTTONEAREST,
+    CombineRgn, CreateRectRgn, DeleteObject, GetMonitorInfoW, InvalidateRect, MonitorFromPoint,
+    SetRectRgn, MONITORINFO, MONITOR_DEFAULTTONEAREST, NULLREGION, RGN_DIFF,
 };
 use windows_sys::Win32::UI::WindowsAndMessaging::{
     EnumWindows, FindWindowExW, GetClassNameW, GetForegroundWindow, GetSystemMetrics,
-    GetWindowRect, IsWindow, SendMessageTimeoutW, SetParent, SetWindowPos, ShowWindow, HWND_BOTTOM,
-    SMTO_NORMAL, SM_CXVIRTUALSCREEN, SM_CYVIRTUALSCREEN, SM_XVIRTUALSCREEN, SM_YVIRTUALSCREEN,
-    SWP_NOACTIVATE, SWP_NOZORDER, SWP_SHOWWINDOW, SW_SHOWNOACTIVATE,
+    GetWindowLongPtrW, GetWindowRect, IsIconic, IsWindow, IsWindowVisible, SendMessageTimeoutW,
+    SetParent, SetWindowPos, ShowWindow, GWL_EXSTYLE, HWND_BOTTOM, SMTO_NORMAL,
+    SM_CXVIRTUALSCREEN, SM_CYVIRTUALSCREEN, SM_XVIRTUALSCREEN, SM_YVIRTUALSCREEN, SWP_NOACTIVATE,
+    SWP_NOZORDER, SWP_SHOWWINDOW, SW_SHOWNOACTIVATE, WS_EX_LAYERED, WS_EX_TRANSPARENT,
 };
 
 const WM_SPAWN_WORKER: u32 = 0x052c;
@@ -35,16 +38,26 @@ const SPAWN_TIMEOUT: Duration = Duration::from_millis(900);
 /// Parameter pairs different Windows builds want before they hand out a WorkerW.
 const SPAWN_VARIANTS: [(usize, isize); 3] = [(0, 0), (0x0d, 0x01), (0x0d, 0x00)];
 
-/// Shell windows that must never be mistaken for a fullscreen application.
-const SHELL_CLASSES: [&str; 7] = [
+/// Shell windows that must never be mistaken for an application covering the
+/// desktop. Progman and WorkerW span the whole thing by definition - they are
+/// the desktop - and the rest are shell surfaces the wallpaper lives happily
+/// underneath.
+const SHELL_CLASSES: [&str; 8] = [
     "Progman",
     "WorkerW",
+    "SHELLDLL_DefView",
     "Shell_TrayWnd",
     "Shell_SecondaryTrayWnd",
     "Windows.UI.Core.CoreWindow",
     "MultitaskingViewFrame",
     "XamlExplorerHostIslandWindow",
 ];
+
+/// Windows 11 rounds window corners and GetWindowRect counts the invisible
+/// resize border, so a maximised window never quite reaches the edges of the
+/// screen. Pulling the test area in by this much keeps a few stray pixels from
+/// reading as "the desktop is still showing".
+const COVERAGE_SLACK: i32 = 12;
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum HostMode {
@@ -291,6 +304,153 @@ pub fn place(window: isize, bounds: Rect, host: &Host) {
 
 pub fn show_without_activating(window: isize) {
     unsafe { ShowWindow(as_hwnd(window), SW_SHOWNOACTIVATE) };
+}
+
+/// The frame the user actually sees. GetWindowRect hands back the layout
+/// rectangle, which on a modern Windows includes an invisible resize border a
+/// few pixels wide on three sides; counting that as covered desktop would make
+/// windows look bigger than they are.
+fn visible_rect(handle: isize) -> Option<Rect> {
+    let mut rect = RECT { left: 0, top: 0, right: 0, bottom: 0 };
+
+    let result = unsafe {
+        DwmGetWindowAttribute(
+            as_hwnd(handle),
+            DWMWA_EXTENDED_FRAME_BOUNDS as u32,
+            &mut rect as *mut RECT as *mut c_void,
+            std::mem::size_of::<RECT>() as u32,
+        )
+    };
+
+    if result < 0 {
+        return window_rect(handle);
+    }
+
+    Some(Rect {
+        x: rect.left,
+        y: rect.top,
+        width: rect.right - rect.left,
+        height: rect.bottom - rect.top,
+    })
+}
+
+/// Windows that are on screen in the window manager's books but painted
+/// nowhere: suspended store apps, and the hidden helper windows a lot of
+/// applications keep around.
+fn is_cloaked(handle: isize) -> bool {
+    let mut cloaked: u32 = 0;
+
+    let result = unsafe {
+        DwmGetWindowAttribute(
+            as_hwnd(handle),
+            DWMWA_CLOAKED as u32,
+            &mut cloaked as *mut u32 as *mut c_void,
+            std::mem::size_of::<u32>() as u32,
+        )
+    };
+
+    result >= 0 && cloaked != 0
+}
+
+/// Whether a window hides whatever is behind it. Layered and click-through
+/// windows may be part transparent - a Rainmeter skin, a Fences panel, an
+/// overlay - and the safe reading is that they do not.
+fn is_opaque(handle: isize) -> bool {
+    let style = unsafe { GetWindowLongPtrW(as_hwnd(handle), GWL_EXSTYLE) } as u32;
+    style & (WS_EX_LAYERED | WS_EX_TRANSPARENT) == 0
+}
+
+/// Running total for the coverage walk below.
+struct Coverage {
+    /// What is left of the wallpaper after the windows found so far.
+    region: isize,
+    /// A rectangle region reused for every window, so the walk allocates once.
+    scratch: isize,
+    own: Vec<isize>,
+    covered: bool,
+}
+
+/// Subtracts one window from what is left of the wallpaper. EnumWindows runs
+/// front to back, so the walk can stop the moment nothing is left.
+unsafe extern "system" fn coverage_proc(hwnd: HWND, lparam: LPARAM) -> BOOL {
+    let state = &mut *(lparam as *mut Coverage);
+    let handle = hwnd as isize;
+
+    // Cheapest tests first: this runs over every top-level window several times
+    // a second, and the DWM ones below are calls into another process. Most
+    // windows on a desktop are invisible, so that check alone clears the field.
+    if IsWindowVisible(hwnd) != TRUE
+        || IsIconic(hwnd) == TRUE
+        || state.own.contains(&handle)
+        || !is_opaque(handle)
+        || SHELL_CLASSES.contains(&class_name(handle).as_str())
+        || is_cloaked(handle)
+    {
+        return TRUE;
+    }
+
+    let Some(rect) = visible_rect(handle) else { return TRUE };
+    if rect.width <= 0 || rect.height <= 0 {
+        return TRUE;
+    }
+
+    SetRectRgn(
+        state.scratch as _,
+        rect.x,
+        rect.y,
+        rect.x + rect.width,
+        rect.y + rect.height,
+    );
+
+    if CombineRgn(state.region as _, state.region as _, state.scratch as _, RGN_DIFF) == NULLREGION {
+        state.covered = true;
+        return FALSE;
+    }
+
+    TRUE
+}
+
+/// True while other windows between them leave none of `bounds` showing.
+///
+/// This is the case for most of a working day - one maximised window is enough
+/// - and it is the difference between the wallpaper costing a few cores and
+/// costing nothing at all.
+pub fn covered_by_windows(bounds: Rect, own: &[isize]) -> bool {
+    let left = bounds.x + COVERAGE_SLACK;
+    let top = bounds.y + COVERAGE_SLACK;
+    let right = bounds.x + bounds.width - COVERAGE_SLACK;
+    let bottom = bounds.y + bounds.height - COVERAGE_SLACK;
+
+    if right <= left || bottom <= top {
+        return false;
+    }
+
+    let mut state = Coverage {
+        region: unsafe { CreateRectRgn(left, top, right, bottom) } as isize,
+        scratch: unsafe { CreateRectRgn(0, 0, 1, 1) } as isize,
+        own: own.to_vec(),
+        covered: false,
+    };
+
+    if state.region == 0 || state.scratch == 0 {
+        unsafe {
+            if state.region != 0 {
+                DeleteObject(state.region as _);
+            }
+            if state.scratch != 0 {
+                DeleteObject(state.scratch as _);
+            }
+        }
+        return false;
+    }
+
+    unsafe {
+        EnumWindows(Some(coverage_proc), &mut state as *mut Coverage as LPARAM);
+        DeleteObject(state.region as _);
+        DeleteObject(state.scratch as _);
+    }
+
+    state.covered
 }
 
 /// True while a real application covers the given monitor edge to edge.

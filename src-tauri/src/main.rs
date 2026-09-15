@@ -9,6 +9,7 @@
 mod background;
 mod bridge;
 mod desktop;
+mod render;
 mod settings;
 mod stats;
 mod tray;
@@ -46,10 +47,16 @@ fn renderer_action(
                 return;
             }
 
+            // Answer only the window that asked. Broadcasting would wake the
+            // screens that have been suspended for having nothing to show, and
+            // a readout nobody is looking at is not worth a renderer; each one
+            // asks again within two seconds of coming back anyway. The reading
+            // itself is cached, so several screens asking costs nothing extra.
+            let Some(key) = wallpaper::key_of(&app, window.label()) else { return };
+
             if let Some(snapshot) = state.stats.read() {
                 if let Ok(value) = serde_json::to_value(snapshot) {
-                    // One reading serves every screen.
-                    wallpaper::dispatch(&app, None, "system-info-updated", value);
+                    wallpaper::dispatch(&app, Some(&key), "system-info-updated", value);
                 }
             }
         }

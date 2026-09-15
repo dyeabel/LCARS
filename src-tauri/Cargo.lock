@@ -1759,7 +1759,7 @@ dependencies = [
 
 [[package]]
 name = "lcars-wallpaper"
-version = "1.0.0"
+version = "1.0.1"
 dependencies = [
  "serde",
  "serde_json",
@@ -1767,6 +1767,8 @@ dependencies = [
  "tauri",
  "tauri-build",
  "tauri-plugin-autostart",
+ "webview2-com",
+ "windows-core 0.61.2",
  "windows-sys 0.59.0",
 ]
 

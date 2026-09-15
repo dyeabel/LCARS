@@ -8,12 +8,18 @@ use tauri::{AppHandle, Manager, WebviewUrl, WebviewWindowBuilder};
 
 use crate::bridge::{self, Viewport};
 use crate::desktop::{self, Host, HostMode, Rect};
+use crate::render;
 use crate::settings::{Fit, Layout, Monitors, Settings};
 use crate::stats::Stats;
 
 const REPIN_DELAYS_MS: [u64; 3] = [250, 1000, 3000];
 const LABEL_PREFIX: &str = "wallpaper-";
 const TICK: Duration = Duration::from_millis(1500);
+/// The coverage check runs on its own, faster clock: the supervisor's pace is
+/// set by how quickly a lost desktop host has to be noticed, but this one
+/// decides how long the desktop stays blank after the last window is moved off
+/// it, and that is something the user watches.
+const COVERAGE_TICK: Duration = Duration::from_millis(400);
 
 /// One wallpaper window, bound to one monitor (or to all of them in span layout).
 pub struct Screen {
@@ -24,7 +30,11 @@ pub struct Screen {
     pub monitor: Rect,
     pub hwnd: isize,
     pub module: String,
+    /// Not showing, and therefore not rendering either.
     pub hidden: bool,
+    /// A hidden window that had to be woken to receive a dispatch, and is owed
+    /// a suspend again on the next tick.
+    pub awake: bool,
     pub red_alert: bool,
     pub margin: u8,
 }
@@ -210,11 +220,16 @@ pub fn start(app: &AppHandle) {
             settings.module_for(&target.key, &shared_pick)
         };
 
+        // Rasterising below 1.0 lowers the page's devicePixelRatio to match, so
+        // the split layout has to convert physical pixels to CSS ones through
+        // the same figure or the slices land in the wrong place.
+        let render_scale = settings.render_scale();
+
         let viewport = (settings.layout == Layout::Split).then(|| Viewport {
             scene,
             offset_x: target.bounds.x - scene.x,
             offset_y: target.bounds.y - scene.y,
-            scale: target.scale,
+            scale: target.scale * render_scale,
         });
 
         let script = bridge::init_script(&settings, Some(&module), index == 0, viewport);
@@ -257,6 +272,11 @@ pub fn start(app: &AppHandle) {
         }
 
         let _ = window.set_ignore_cursor_events(true);
+
+        if render_scale < 1.0 {
+            render::set_rasterization_scale(&window, target.scale * render_scale);
+        }
+
         let _ = window.show();
         desktop::show_without_activating(hwnd);
         desktop::place(hwnd, target.bounds, &host);
@@ -275,6 +295,7 @@ pub fn start(app: &AppHandle) {
             hwnd,
             module,
             hidden: false,
+            awake: false,
             red_alert: settings.red_alert,
             margin: settings.margin,
         });
@@ -338,6 +359,21 @@ pub fn rebuild(app: &AppHandle) {
     start(app);
 }
 
+/// The monitor a window belongs to, for dispatching back to just that one.
+pub fn key_of(app: &AppHandle, label: &str) -> Option<String> {
+    app.state::<AppState>()
+        .inner
+        .lock()
+        .ok()
+        .and_then(|guard| {
+            guard
+                .screens
+                .iter()
+                .find(|screen| screen.label == label)
+                .map(|screen| screen.key.clone())
+        })
+}
+
 /// Push an action into one screen, or into every screen when `key` is None.
 pub fn dispatch(app: &AppHandle, key: Option<&str>, action: &str, value: serde_json::Value) {
     let state = app.state::<AppState>();
@@ -354,9 +390,38 @@ pub fn dispatch(app: &AppHandle, key: Option<&str>, action: &str, value: serde_j
     let script = bridge::dispatch_call(action, &value);
 
     for label in labels {
-        if let Some(window) = app.get_webview_window(&label) {
-            let _ = window.eval(&script);
+        let Some(window) = app.get_webview_window(&label) else { continue };
+
+        // A suspended page would never run this. Waking it leaves it invisible
+        // and so still cheap; the supervisor parks it again on the next tick.
+        if let Ok(mut guard) = state.inner.lock() {
+            if let Some(screen) = guard.screens.iter_mut().find(|screen| screen.label == label) {
+                if screen.hidden && !screen.awake {
+                    screen.awake = true;
+                    render::resume(&window);
+                }
+            }
         }
+
+        let _ = window.eval(&script);
+    }
+}
+
+/// Shows or hides one window, browser and all.
+///
+/// Order matters both ways round: WebView2 only suspends a controller that is
+/// already invisible, and only draws one that has been resumed.
+fn set_window_running(app: &AppHandle, label: &str, running: bool) {
+    let Some(window) = app.get_webview_window(label) else { return };
+
+    if running {
+        render::resume(&window);
+        render::set_visible(&window, true);
+        let _ = window.show();
+    } else {
+        let _ = window.hide();
+        render::set_visible(&window, false);
+        render::suspend(&window);
     }
 }
 
@@ -443,15 +508,14 @@ pub fn set_paused(app: &AppHandle, paused: bool) {
             .iter_mut()
             .map(|screen| {
                 screen.hidden = paused;
+                screen.awake = false;
                 screen.label.clone()
             })
             .collect()
     };
 
     for label in labels {
-        if let Some(window) = app.get_webview_window(&label) {
-            let _ = if paused { window.hide() } else { window.show() };
-        }
+        set_window_running(app, &label, !paused);
     }
 
     if !paused {
@@ -470,6 +534,8 @@ pub fn is_paused(app: &AppHandle) -> bool {
 /// Background supervisor: keeps the windows attached, hides them while a game or
 /// other fullscreen app owns the monitor, and rotates modules on a timer.
 pub fn supervise(app: AppHandle) {
+    let coverage = app.clone();
+
     thread::spawn(move || loop {
         thread::sleep(TICK);
 
@@ -479,12 +545,53 @@ pub fn supervise(app: AppHandle) {
             move || tick(&app)
         });
     });
+
+    thread::spawn(move || loop {
+        thread::sleep(COVERAGE_TICK);
+
+        let app = coverage.clone();
+        let _ = app.run_on_main_thread({
+            let app = app.clone();
+            move || coverage_tick(&app)
+        });
+    });
+}
+
+/// Decides, several times a second, whether each screen still has anything to
+/// show. Kept apart from the supervisor tick so the wallpaper reappears the
+/// moment the desktop does.
+fn coverage_tick(app: &AppHandle) {
+    let state = app.state::<AppState>();
+
+    let mode = {
+        let Ok(guard) = state.inner.lock() else { return };
+
+        // A hand-paused wallpaper stays paused, and there is nothing to decide
+        // until the windows exist.
+        if guard.paused || guard.screens.is_empty() {
+            return;
+        }
+
+        if guard.settings.pause_when_covered {
+            AutoPause::WhenCovered
+        } else if guard.settings.pause_on_fullscreen {
+            AutoPause::OnFullscreen
+        } else {
+            AutoPause::Never
+        }
+    };
+
+    if mode == AutoPause::Never {
+        return;
+    }
+
+    update_auto_pause(app, mode);
 }
 
 fn tick(app: &AppHandle) {
     let state = app.state::<AppState>();
 
-    let (host_lost, on_fallback_host, paused, pause_on_fullscreen, shuffle_due) = {
+    let (host_lost, on_fallback_host, shuffle_due) = {
         let Ok(guard) = state.inner.lock() else { return };
 
         let host_lost = match guard.host {
@@ -497,7 +604,7 @@ fn tick(app: &AppHandle) {
         let shuffle_due = guard.settings.shuffle_minutes > 0
             && guard.last_shuffle.elapsed() >= Duration::from_secs(guard.settings.shuffle_minutes * 60);
 
-        (host_lost, on_fallback_host, guard.paused, guard.settings.pause_on_fullscreen, shuffle_due)
+        (host_lost, on_fallback_host, shuffle_due)
     };
 
     // Explorer restarting takes the wallpaper host - and every child - with it.
@@ -535,15 +642,24 @@ fn tick(app: &AppHandle) {
         }
     }
 
-    if paused || !pause_on_fullscreen {
-        return;
-    }
-
-    update_fullscreen_pause(app);
+    // Whether a screen has anything to show is decided on its own, faster
+    // clock; all this tick owes it is parking any window a dispatch had to wake.
+    park_woken_screens(app);
 }
 
-/// A wallpaper nobody can see still costs a GPU.
-fn update_fullscreen_pause(app: &AppHandle) {
+/// When the wallpaper stops drawing itself.
+#[derive(Clone, Copy, PartialEq, Eq)]
+enum AutoPause {
+    Never,
+    /// Only for an application that owns a whole monitor - a game, a video.
+    OnFullscreen,
+    /// For anything that leaves none of the wallpaper showing, which on a
+    /// working desktop is most of the time.
+    WhenCovered,
+}
+
+/// A wallpaper nobody can see still costs a CPU and a GPU, so stop drawing it.
+fn update_auto_pause(app: &AppHandle, mode: AutoPause) {
     let state = app.state::<AppState>();
 
     let changes: Vec<(String, bool)> = {
@@ -554,22 +670,63 @@ fn update_fullscreen_pause(app: &AppHandle) {
             .screens
             .iter_mut()
             .filter_map(|screen| {
-                let covered = desktop::covered_by_fullscreen_app(screen.monitor, &handles);
+                // Fullscreen is judged against the whole monitor - a maximised
+                // window covers the work area and is no reason to stop - while
+                // coverage is judged against the wallpaper itself, which is all
+                // there is to see.
+                let covered = match mode {
+                    AutoPause::Never => false,
+                    AutoPause::OnFullscreen => {
+                        desktop::covered_by_fullscreen_app(screen.monitor, &handles)
+                    }
+                    AutoPause::WhenCovered => {
+                        desktop::covered_by_windows(screen.bounds, &handles)
+                    }
+                };
+
                 if covered == screen.hidden {
                     return None;
                 }
 
                 screen.hidden = covered;
+                screen.awake = false;
                 Some((screen.label.clone(), covered))
             })
             .collect()
     };
 
+    if changes.is_empty() {
+        return;
+    }
+
     for (label, hidden) in changes {
-        if let Some(window) = app.get_webview_window(&label) {
-            let _ = if hidden { window.hide() } else { window.show() };
-        }
+        set_window_running(app, &label, !hidden);
     }
 
     pin_all(app);
+}
+
+/// Suspends again the hidden windows that a dispatch had to wake.
+fn park_woken_screens(app: &AppHandle) {
+    let state = app.state::<AppState>();
+
+    let labels: Vec<String> = {
+        let Ok(mut guard) = state.inner.lock() else { return };
+
+        guard
+            .screens
+            .iter_mut()
+            .filter(|screen| screen.hidden && screen.awake)
+            .map(|screen| {
+                screen.awake = false;
+                screen.label.clone()
+            })
+            .collect()
+    };
+
+    for label in labels {
+        if let Some(window) = app.get_webview_window(&label) {
+            render::suspend(&window);
+        }
+    }
 }

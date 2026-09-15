@@ -25,9 +25,11 @@ host. Credit and licence terms are at the bottom.
 - **Fits around the taskbar.** *Screen fit* can hold the wallpaper inside the
   shell's work area so the taskbar covers none of the interface, and extra edge
   insets handle bars the shell does not report.
-- **Pauses for games.** When an application covers a monitor edge to edge, the
-  wallpaper on that monitor is hidden until the application goes away. Each
-  monitor is handled separately.
+- **Stops when there is nothing to see.** As soon as other windows leave none of
+  the wallpaper showing on a monitor - one maximised window is enough - the
+  browser behind it is told to stop drawing and the page is suspended. Each
+  monitor is handled separately, and it costs effectively nothing while it is
+  off. See [What it costs](#what-it-costs).
 - **Survives Explorer restarts.** If the desktop host disappears, the windows are
   rebuilt and re-attached automatically.
 - **Follows the screens.** A resolution change, a scaling change or a monitor
@@ -75,16 +77,55 @@ Artifacts land in `src-tauri/target/release/`; the installer in
 | Module per screen | Per-monitor override, shown when more than one window exists |
 | Layout | Separate scenes, one split scene, or one stretched window |
 | Screens | All monitors, the primary one, or a hand-picked set |
-| Appearance | Margin, filter effect, red alert, boot animation |
+| Appearance | Margin, filter effect, render quality, red alert, boot animation |
 | Screen fit | Whole screen, or keep clear of the taskbar |
 | Static wallpaper | Leaves the Windows wallpaper alone, or paints it black |
 | Audio | Off by default; sound effect and engine volumes |
-| Behaviour | Fullscreen pause, live readouts, shuffle interval, start with Windows |
+| Behaviour | Pause while covered, fullscreen pause, live readouts, shuffle interval, start with Windows |
 | Reload wallpaper | Rebuilds the windows, e.g. after a display change |
 | Settings file | Opens `%APPDATA%\com.lcars.wallpaper\settings.json` |
 
 Modules: Titan (default), Enterprise, Enterprise D, Enterprise F, Enterprise G,
 NCC-1031, Warp drive, Starbase, DNA.
+
+## What it costs
+
+The interface is a few hundred CSS and SVG animations, and running it over two
+1920x1080 screens costs roughly four cores' worth of CPU - about a third of a
+twelve-thread machine - plus the GPU. Three things bring that down, in the order
+they are worth reaching for.
+
+**Let it stop.** *Behaviour -> Pause while nothing of it is showing* is on by
+default and does almost all of the work: on the same machine the whole app drops
+from ~420% of one core to ~3% the moment windows cover the desktop, which on a
+working day is most of the time. It is not the same as hiding the window -
+these windows are children of Explorer's WorkerW, so Chromium's own occlusion
+tracking never notices them and a hidden window carries on rendering at full
+speed. The browser has to be told directly, which is what
+[`src-tauri/src/render.rs`](src-tauri/src/render.rs) does.
+
+**Choose a cheaper module.** The spread is larger than anything else on offer -
+measured on one 1920x1080 screen, as a percentage of one core:
+
+| Module | Cost | | Module | Cost |
+| --- | --- | --- | --- | --- |
+| Enterprise F | 44% | | NCC-1031 | 92% |
+| Enterprise D | 46% | | DNA | 156% |
+| Titan (default) | 52% | | Warp drive | 158% |
+| Enterprise | 59% | | Starbase | 160% |
+| | | | Enterprise G | 222% |
+
+**Render quality.** *Appearance -> Render quality* rasterises the scene into
+fewer pixels and lets the compositor stretch it. It is the smallest of the
+three: 60% quality saved around 14% of the total here, because most of the cost
+is per-frame style and compositing work that does not care how big the pixels
+are. Worth trying at 75% if the machine is struggling; not worth the softer
+image otherwise.
+
+Two smaller ones: *Behaviour -> Live system readouts* can go if the real CPU and
+network figures in the panels do not matter, and *Appearance -> Filter -> Soft
+glow* animates a full screen Gaussian blur and is by far the most expensive of
+the filters.
 
 ### Edge insets
 
@@ -128,6 +169,7 @@ src-tauri/src/
   wallpaper.rs       window per monitor, layouts, pausing, the supervisor loop
   desktop.rs         Win32: WorkerW discovery, re-parenting, fullscreen detection
   bridge.rs          the electronAPI bridge and split viewport script
+  render.rs          stopping and scaling the browser behind each window
   tray.rs            tray icon and menu
   settings.rs        settings file
   stats.rs           CPU / memory / network readouts

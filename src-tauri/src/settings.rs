@@ -11,6 +11,17 @@ pub const MODULES: [&str; 9] = [
 
 pub const FILTERS: [&str; 4] = ["none", "softGlow", "grayScale", "lightMode"];
 
+/// Fractions of the real pixel count the scene may be rasterised at. Rendering
+/// and compositing cost follows the number of pixels, so this is the one knob
+/// that lowers the price of the animation itself rather than the time it runs.
+pub const RENDER_SCALES: [(&str, f64); 5] = [
+    ("Full (sharpest)", 1.0),
+    ("85%", 0.85),
+    ("75%", 0.75),
+    ("60%", 0.6),
+    ("50% (cheapest)", 0.5),
+];
+
 /// How the scene is spread over the available monitors.
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(rename_all = "lowercase")]
@@ -109,6 +120,12 @@ pub struct Settings {
     pub boot_animation: bool,
     pub system_info: bool,
     pub pause_on_fullscreen: bool,
+    /// Stop rendering whenever other windows leave none of the wallpaper
+    /// showing, not just when one of them is fullscreen.
+    pub pause_when_covered: bool,
+    /// Fraction of the real pixels the scene is rasterised into, 1.0 for all of
+    /// them. See RENDER_SCALES.
+    pub render_scale: f64,
     pub shuffle_minutes: u64,
     pub fit: Fit,
     pub insets: Insets,
@@ -134,6 +151,8 @@ impl Default for Settings {
             boot_animation: true,
             system_info: true,
             pause_on_fullscreen: true,
+            pause_when_covered: true,
+            render_scale: 1.0,
             shuffle_minutes: 0,
             fit: Fit::default(),
             insets: Insets::default(),
@@ -197,6 +216,16 @@ impl Settings {
 
     pub fn one_scene(&self) -> bool {
         self.layout != Layout::Separate
+    }
+
+    /// Guards against a hand-edited settings file asking for something the
+    /// browser would refuse or that would be unreadable on screen.
+    pub fn render_scale(&self) -> f64 {
+        if self.render_scale.is_finite() {
+            self.render_scale.clamp(0.25, 1.0)
+        } else {
+            1.0
+        }
     }
 }
 
