@@ -1,0 +1,474 @@
+<svg width="7708" height="2196" viewBox="0 0 7708 2196" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="mewhoStarbase">
+<rect width="7708" height="2196" fill="black"></rect>
+<g id="Starbase">
+<path id="refBgBox" d="M7708 0H0V2196H7708V0Z" fill="black"></path>
+<rect id="htmlContainerRefBox" opacity="0.1" x="3316" y="144" width="1981" height="1756" fill="#D9D9D9"></rect>
+<rect id="blocker01" x="2367" y="336" width="376" height="5" fill="#00FF00"></rect>
+<g id="blocker00">
+<rect id="rect" x="5761.1" y="45.9825" width="9.1" height="90" transform="rotate(0.25 5761.1 45.9825)" fill="#00FF00"></rect>
+<rect id="rect_2" opacity="0.9" x="5761" y="45.9821" width="0.1" height="90" transform="rotate(0.25 5761 45.9821)" fill="#00FF00"></rect>
+<rect id="rect_3" opacity="0.8" x="5760.9" y="45.9817" width="0.1" height="90" transform="rotate(0.25 5760.9 45.9817)" fill="#00FF00"></rect>
+<rect id="rect_4" opacity="0.7" x="5760.8" y="45.9812" width="0.1" height="90" transform="rotate(0.25 5760.8 45.9812)" fill="#00FF00"></rect>
+<rect id="rect_5" opacity="0.6" x="5760.7" y="45.9808" width="0.1" height="90" transform="rotate(0.25 5760.7 45.9808)" fill="#00FF00"></rect>
+<rect id="rect_6" opacity="0.5" x="5760.6" y="45.9803" width="0.1" height="90" transform="rotate(0.25 5760.6 45.9803)" fill="#00FF00"></rect>
+<rect id="rect_7" opacity="0.4" x="5760.5" y="45.9799" width="0.1" height="90" transform="rotate(0.25 5760.5 45.9799)" fill="#00FF00"></rect>
+<rect id="rect_8" opacity="0.3" x="5760.4" y="45.9795" width="0.1" height="90" transform="rotate(0.25 5760.4 45.9795)" fill="#00FF00"></rect>
+<rect id="rect_9" opacity="0.2" x="5760.3" y="45.979" width="0.1" height="90" transform="rotate(0.25 5760.3 45.979)" fill="#00FF00"></rect>
+<rect id="rect_10" opacity="0.1" x="5760.2" y="45.9786" width="0.1" height="90" transform="rotate(0.25 5760.2 45.9786)" fill="#00FF00"></rect>
+</g>
+<g id="ui">
+<g id="frameLeft4">
+<g id="frameLeft4-inner">
+<path id="Subtract" opacity="0.85" fill-rule="evenodd" clip-rule="evenodd" d="M3407 1488H3244V1670C3244 1703.14 3270.86 1730 3304 1730H3588V1668H3447C3424.91 1668 3407 1650.09 3407 1628V1488Z" fill="#1E2229"></path>
+<text id="t" fill="#6D748C" style="white-space:pre" font-size="20" letter-spacing="0.02em"><tspan x="3301.27" y="1529.16">ZOOM LEVELS</tspan></text>
+<path id="Subtract_2" opacity="0.85" fill-rule="evenodd" clip-rule="evenodd" d="M3406.99 588H3243.99L3243.99 1470H3406.99V588ZM3290 1441H3264V1457H3290V1441Z" fill="#1E2229"></path>
+<path id="Subtract_3" opacity="0.85" fill-rule="evenodd" clip-rule="evenodd" d="M3643.35 193C3609.22 193 3575.65 201.738 3545.85 218.381L3305.44 352.626C3267.47 373.828 3243.94 413.911 3243.94 457.398L3243.94 491L3406.94 491L3406.94 483.995C3406.94 454.915 3422.72 428.124 3448.16 414.026L3686.2 282.076C3715.87 265.63 3749.24 257 3783.16 257L4237.98 257L4237.98 193L3643.35 193ZM3406.94 493L3243.94 493L3243.94 571.998L3406.94 571.998L3406.94 493ZM3264 544L3290 544L3290 560L3264 560L3264 544Z" fill="#1E2229"></path>
+<g id="btnCoreSpin">
+<rect id="coreSpinBase" opacity="0.3" x="3244" y="492" width="163" height="80" fill="#52596E"></rect>
+<rect id="coreSpinToggle" x="3277" y="547" width="10" height="10" fill="#9EA5BA"></rect>
+<text id="coreSpin-taR" fill="#6D748C" style="white-space:pre" font-size="22" letter-spacing="0.02em"><tspan x="3323.68" y="559.172">SPIN OFF</tspan></text>
+<text id="t_2" fill="#6D748C" style="white-space:pre" font-size="22" letter-spacing="0.02em"><tspan x="3353.46" y="528.172">CORE</tspan></text>
+</g>
+<text id="rndText-d3.d2sd1-Z-taR" fill="#6D748C" style="white-space:pre" font-size="20"><tspan x="3311.34" y="1456.16">SB-377.19 4</tspan></text>
+<g id="btnReset">
+<rect id="rect_11" x="3634" y="1668" width="120" height="62" fill="#6D748C"></rect>
+<text id="RESET" fill="#1E2229" style="white-space:pre" font-size="32" letter-spacing="0.02em"><tspan x="3679.35" y="1712.75">RESET</tspan></text>
+<rect id="rect_12" x="3604" y="1668" width="14" height="62" fill="#FF6753"></rect>
+</g>
+<g id="groupLeftInnerButtons" opacity="0.85">
+<g id="btnLeftInner4">
+<path id="rect_13" d="M3435 1516H3610C3634.3 1516 3654 1535.7 3654 1560C3654 1584.3 3634.3 1604 3610 1604H3435V1516Z" fill="#2F3749"></path>
+<g id="circle">
+<circle id="outer" opacity="0.5" cx="3610" cy="1560" r="36" fill="#6D748C" stroke="black" stroke-width="1.5"></circle>
+<circle id="inner" cx="3610" cy="1560" r="14" stroke="#EF1D10" stroke-width="8"></circle>
+<circle id="dot" cx="3610" cy="1560" r="13" fill="black"></circle>
+</g>
+<text id="rndText-d2-d1-Z-taR" fill="#9EA5BA" style="white-space:pre" font-size="48" font-weight="300" letter-spacing="-0.04em"><tspan x="3485.1" y="1582.38">40-8</tspan></text>
+</g>
+<g id="btnLeftInner3">
+<path id="rect_14" d="M3435 1400H3610C3634.3 1400 3654 1419.7 3654 1444C3654 1468.3 3634.3 1488 3610 1488H3435V1400Z" fill="#52596E"></path>
+<g id="circle_2">
+<circle id="outer_2" opacity="0.5" cx="3610" cy="1444" r="36" fill="#9EA5BA" stroke="black" stroke-width="1.5"></circle>
+<circle id="inner_2" cx="3610" cy="1444" r="14" stroke="#EF1D10" stroke-width="8"></circle>
+<circle id="dot_2" cx="3610" cy="1444" r="13" fill="black"></circle>
+</g>
+<text id="rndText-d2-d1-Z-taR_2" fill="black" style="white-space:pre" font-size="48" font-weight="300" letter-spacing="-0.04em"><tspan x="3485.1" y="1466.38">40-8</tspan></text>
+</g>
+<g id="btnLeftInner2">
+<path id="rect_15" d="M3435 1284H3610C3634.3 1284 3654 1303.7 3654 1328C3654 1352.3 3634.3 1372 3610 1372H3435V1284Z" fill="#52596E"></path>
+<g id="circle_3">
+<circle id="outer_3" opacity="0.5" cx="3610" cy="1328" r="36" fill="#9EA5BA" stroke="black" stroke-width="1.5"></circle>
+<circle id="inner_3" cx="3610" cy="1328" r="14" stroke="#EF1D10" stroke-width="8"></circle>
+<circle id="dot_3" cx="3610" cy="1328" r="13" fill="black"></circle>
+</g>
+<text id="rndText-d2-d1-Z-taR_3" fill="black" style="white-space:pre" font-size="48" font-weight="300" letter-spacing="-0.04em"><tspan x="3485.1" y="1350.38">40-8</tspan></text>
+</g>
+<g id="btnLeftInner1">
+<path id="rect_16" d="M3435 1168H3610C3634.3 1168 3654 1187.7 3654 1212C3654 1236.3 3634.3 1256 3610 1256H3435V1168Z" fill="#2F3749"></path>
+<g id="circle_4">
+<circle id="outer_4" opacity="0.5" cx="3610" cy="1212" r="36" fill="#6D748C" stroke="black" stroke-width="1.5"></circle>
+<circle id="inner_4" cx="3610" cy="1212" r="14" stroke="#EF1D10" stroke-width="8"></circle>
+<circle id="dot_4" cx="3610" cy="1212" r="13" fill="black"></circle>
+</g>
+<text id="rndText-d2-d1-Z-taR_4" fill="#9EA5BA" style="white-space:pre" font-size="48" font-weight="300" letter-spacing="-0.04em"><tspan x="3485.1" y="1234.38">40-8</tspan></text>
+</g>
+<g id="btnLeftInner0">
+<path id="rect_17" d="M3435 1052H3610C3634.3 1052 3654 1071.7 3654 1096C3654 1120.3 3634.3 1140 3610 1140H3435V1052Z" fill="#52596E"></path>
+<g id="circle_5">
+<circle id="outer_5" opacity="0.5" cx="3610" cy="1096" r="36" fill="#9EA5BA" stroke="black" stroke-width="1.5"></circle>
+<circle id="inner_5" cx="3610" cy="1096" r="14" stroke="#EF1D10" stroke-width="8"></circle>
+<circle id="dot_5" cx="3610" cy="1096" r="13" fill="black"></circle>
+</g>
+<text id="rndText-d2-d1-Z-taR_5" fill="black" style="white-space:pre" font-size="48" font-weight="300" letter-spacing="-0.04em"><tspan x="3485.1" y="1118.38">40-8</tspan></text>
+</g>
+</g>
+<g id="groupTopButtons">
+<g id="btnTop0">
+<rect id="rect_18" x="4252" y="208" width="123" height="48" fill="black" fill-opacity="0.67" stroke="#52596E" stroke-width="3"></rect>
+<text id="fixed" fill="#E7442A" style="white-space:pre" font-size="28" letter-spacing="0.02em"><tspan x="4266" y="244.219">SYS</tspan></text>
+</g>
+<g id="btnTop1">
+<rect id="rect_19" x="4385" y="208" width="150" height="48" fill="black" fill-opacity="0.5" stroke="#52596E" stroke-width="3"></rect>
+<text id="rndText-d2-Z" fill="#6D748C" style="white-space:pre" font-size="28"><tspan x="4399" y="244.219">34</tspan></text>
+<text id="rndText-d4-Z-taR" fill="#6D748C" style="white-space:pre" font-size="28"><tspan x="4473.3" y="244.219">3456</tspan></text>
+</g>
+<g id="btnTop2">
+<rect id="rect_20" x="4545" y="208" width="106" height="48" fill="black" fill-opacity="0.5" stroke="#52596E" stroke-width="3"></rect>
+<text id="rndText-d4-Z-taR_2" fill="#6D748C" style="white-space:pre" font-size="28"><tspan x="4587.3" y="244.219">3456</tspan></text>
+</g>
+<g id="btnTop3">
+<rect id="rect_21" x="4661" y="208" width="106" height="48" fill="black" fill-opacity="0.5" stroke="#52596E" stroke-width="3"></rect>
+<text id="rndText-d4-Z-taR_3" fill="#6D748C" style="white-space:pre" font-size="28"><tspan x="4705.3" y="244.219">3456</tspan></text>
+</g>
+<g id="btnTop4">
+<rect id="rect_22" x="4777" y="208" width="106" height="48" fill="black" fill-opacity="0.5" stroke="#52596E" stroke-width="3"></rect>
+<text id="rndText-d4-Z-taR_4" fill="#6D748C" style="white-space:pre" font-size="28"><tspan x="4821.3" y="244.219">3456</tspan></text>
+</g>
+<g id="btnTop5">
+<rect id="rect_23" x="4893" y="208" width="126" height="48" fill="black" fill-opacity="0.5" stroke="#52596E" stroke-width="3"></rect>
+<text id="rndText-d4-Z-taR_5" fill="#6D748C" style="white-space:pre" font-size="28"><tspan x="4956.3" y="244.219">3456</tspan></text>
+</g>
+</g>
+</g>
+</g>
+<g id="frameLeft3">
+<g id="frameLeft3-inner">
+<path id="v" d="M3210 1528L3210 1684C3210 1728.18 3245.82 1764 3290 1764L3618 1764" stroke="#2F3749" stroke-width="3"></path>
+<g id="lineLevel">
+<line id="l-toRight" x1="3195" y1="1581" x2="3195" y2="1656" stroke="#52596E" stroke-width="3"></line>
+<line id="l-toRight_2" x1="3197" y1="1604" x2="3197" y2="1648" stroke="#6D748C" stroke-width="4"></line>
+<line id="l-toRight_3" x1="3195" y1="1528" x2="3195" y2="1568" stroke="#52596E" stroke-width="3"></line>
+<line id="l-toRight_4" x1="3210" y1="1604" x2="3210" y2="1648" stroke="#6D748C" stroke-width="4"></line>
+<line id="l-toRight_5" x1="3208" y1="588" x2="3208" y2="652" stroke="#52596E" stroke-width="6"></line>
+<line id="l-toRight_6" x1="3199" y1="508" x2="3199" y2="572" stroke="#52596E" stroke-width="10"></line>
+<line id="l-toBottom" x1="4238" y1="174" x2="4214" y2="174" stroke="#52596E" stroke-width="6"></line>
+<line id="l-toBottom_2" x1="4343" y1="172.5" x2="4251" y2="172.5" stroke="#52596E" stroke-width="3"></line>
+<line id="l-toBottom_3" x1="4376" y1="172.5" x2="4251" y2="172.5" stroke="#52596E" stroke-width="3"></line>
+</g>
+<path id="v_2" d="M3195 588L3195 1469" stroke="#52596E" stroke-width="3"></path>
+<path id="v_3" d="M3195 430L3195 572" stroke="#52596E" stroke-width="3"></path>
+<path id="Union" d="M4375.99 161.001L3631.74 161.001C3594.42 161.001 3557.72 170.493 3525.08 188.584L3271.77 328.995C3233.62 350.143 3209.95 390.329 3209.95 433.95L3209.95 571.998" stroke="#2F3749" stroke-width="3"></path>
+</g>
+</g>
+<g id="frameLeft2">
+<g id="cornerDash1">
+<path id="offsetStop1" opacity="0.2" d="M3080 1617L3080 1424" stroke="#E7442A" stroke-width="10"></path>
+<path id="offsetStop0" opacity="0.2" d="M3080 1666L3080 1424" stroke="#E7442A" stroke-width="10"></path>
+<path id="dash" opacity="0.5" d="M3080 1424L3080 1702C3080 1735.14 3053.14 1762 3020 1762L2809 1762" stroke="#E7442A" stroke-width="10" stroke-dasharray="107 107"></path>
+</g>
+<path id="v_4" opacity="0.4" d="M2772 1764L3022 1764C3055.14 1764 3082 1737.14 3082 1704L3082 1424" stroke="#E7442A" stroke-width="3"></path>
+<path id="v_5" opacity="0.5" d="M2795 1755L2772 1755" stroke="#E7442A" stroke-width="5"></path>
+<path id="v_6" opacity="0.3" d="M2900 1754L2809 1754" stroke="#E7442A" stroke-width="3"></path>
+<path id="Union_2" d="M4375.99 97.0007L3654.62 97.0007C3613.91 97.0007 3573.87 107.356 3538.27 127.092L3139.68 348.031C3082.46 379.753 3046.95 430.031 3046.95 505.463L3046.95 1374" stroke="#E7442A" stroke-width="6"></path>
+<path id="subtract" fill-rule="evenodd" clip-rule="evenodd" d="M3000 1413V1420H3050V1369H3044V1371C3044 1394.2 3025.2 1413 3002 1413H3000Z" fill="#E7442A"></path>
+<path id="rect_24" d="M3002 1432H3048V1700C3048 1715.46 3035.46 1728 3020 1728H3002V1432Z" stroke="#E7442A" stroke-width="3"></path>
+<path id="v_7" d="M2985 1730L2985 1424" stroke="#E7442A" stroke-width="6"></path>
+<path id="v_8" d="M2985 1420L2985 1413" stroke="#E7442A" stroke-width="5"></path>
+<path id="v_9" d="M3047 1619L3002 1619" stroke="#E7442A"></path>
+<path id="v_10" d="M3047 1512L3002 1512" stroke="#E7442A" stroke-width="3"></path>
+<path id="v_11" d="M3047 1660L3002 1660" stroke="#E7442A" stroke-width="11"></path>
+<path id="v_12" d="M3048 1435L3003 1435" stroke="#E7442A" stroke-width="6"></path>
+<path id="v_13" d="M3050 1425.5L3000 1425.5" stroke="#E7442A" stroke-width="3"></path>
+<g id="pillLarge">
+<rect id="rect_25" x="3029" y="883" width="36" height="160" rx="14" fill="#E7442A"></rect>
+<rect id="rect_26" x="3036" y="976" width="22" height="48" rx="10" fill="black"></rect>
+<rect id="rect_27" x="3036" y="947" width="22" height="25" rx="10" fill="black"></rect>
+</g>
+<g id="pillSmall">
+<rect id="rect_28" x="3029" y="780" width="36" height="93" rx="14" fill="#E7442A"></rect>
+<rect id="rect_29" x="3039" y="842" width="16" height="22" rx="8" fill="black"></rect>
+<rect id="rect_30" x="3039" y="814" width="16" height="22" rx="8" fill="black"></rect>
+</g>
+</g>
+<g id="frameLeft1">
+<rect id="rect_31" x="2743" y="1427" width="173" height="225" fill="#2F3749"></rect>
+<rect id="rect_32" x="2743" y="1270" width="173" height="154" fill="#2F3749"></rect>
+<rect id="rect_33" opacity="0.85" x="2743" y="1155" width="173" height="112" fill="#2F3749"></rect>
+<rect id="rect_34" opacity="0.7" x="2743" y="1046" width="173" height="106" fill="#2F3749"></rect>
+<rect id="rect_35" x="2743" y="816" width="173" height="227" fill="#2F3749"></rect>
+<rect id="rect_36" x="2743" y="695" width="173" height="118" fill="#2F3749"></rect>
+<path id="Subtract_4" fill-rule="evenodd" clip-rule="evenodd" d="M3276.28 67.9984L2845.99 306.511C2782.41 341.757 2742.95 408.733 2742.95 481.435L2742.95 691.997L2915.95 691.997L2915.95 491.283C2915.95 418.581 2955.41 351.606 3018.99 316.359L3467.05 67.9984L3276.28 67.9984Z" fill="#2F3749"></path>
+<g id="g">
+<rect id="rect_37" x="2743" y="1668" width="173" height="62" fill="#2F3749"></rect>
+<rect id="rect_38" x="2772" y="1676" width="128" height="46" fill="black"></rect>
+<text id="rndText-d4-Z-taR_6" opacity="0.5" fill="#E7442A" style="white-space:pre" font-size="28" letter-spacing="0.02em"><tspan x="2839.62" y="1711.22">3458</tspan></text>
+</g>
+<rect id="rect_39" x="2772" y="1573" width="128" height="46" fill="black"></rect>
+<rect id="rect_40" x="2772" y="1512" width="128" height="46" fill="black"></rect>
+<text id="rndText-d6-Z-taR" opacity="0.67" fill="#E7442A" style="white-space:pre" font-size="28" letter-spacing="0.02em"><tspan x="2815.15" y="1609.22">000000</tspan></text>
+<text id="rndText-d6-Z-taR_2" opacity="0.67" fill="#FF977B" style="white-space:pre" font-size="28" letter-spacing="0.02em"><tspan x="2815.15" y="1548.22">000000</tspan></text>
+<text id="rndText-d3.d2sd1-Z-taR_2" fill="black" style="white-space:pre" font-size="32"><tspan x="2801.91" y="1402.75">349.86 5</tspan></text>
+<text id="rndText-d3.d2sd1-Z-taR_3" fill="black" style="white-space:pre" font-size="32"><tspan x="2801.91" y="743.75">349.86 5</tspan></text>
+</g>
+<g id="frameTop">
+<g id="lineLevel_2">
+<line id="l-toBottom_4" x1="4376" y1="52" x2="4214" y2="52" stroke="#6D748C" stroke-width="4"></line>
+<line id="l-toBottom_5" x1="4376" y1="52" x2="4214" y2="52" stroke="#6D748C" stroke-width="4"></line>
+<line id="l-toTop" x1="4376" y1="81" x2="4214" y2="81" stroke="#6D748C" stroke-width="4"></line>
+<line id="l-toTop_2" x1="4336" y1="81" x2="4244" y2="81" stroke="#6D748C" stroke-width="4"></line>
+</g>
+<path id="l" d="M2891 52H4376" stroke="#6D748C" stroke-width="4"></path>
+<path id="l_2" d="M4214 80.9999L4376 80.9999" stroke="#6D748C" stroke-width="4"></path>
+<path id="v_14" d="M4235 53.9999V61.9999M4235 78.9999V70.9999" stroke="#6D748C" stroke-width="4"></path>
+<path id="v_15" d="M4345 53.9999V61.9999M4345 78.9999V70.9999" stroke="#6D748C" stroke-width="4"></path>
+</g>
+<g id="frameLeft0">
+<rect id="rect_41" x="2370" y="1427" width="370" height="225" fill="#52596E"></rect>
+<rect id="rect_42" x="2370" y="1270" width="370" height="154" fill="#52596E"></rect>
+<g id="btnScreenshot">
+<rect id="rect_43" opacity="0.85" x="2370" y="1155" width="370" height="112" fill="#52596E"></rect>
+<text id="t_3" fill="black" style="white-space:pre" font-size="32" letter-spacing="0.03em"><tspan x="2605.59" y="1204.75">GENERATE&#10;</tspan><tspan x="2517.25" y="1245.75">LIVE SCREENSHOT</tspan></text>
+</g>
+<rect id="rect_44" opacity="0.7" x="2370" y="1046" width="370" height="106" fill="#52596E"></rect>
+<g id="btnWireframe">
+<rect id="rect_45" x="2370" y="816" width="370" height="227" fill="#52596E"></rect>
+<text id="t_4" fill="black" style="white-space:pre" font-size="32"><tspan x="2525.88" y="1021.75">CORE WIREFRAME</tspan></text>
+</g>
+<path id="Subtract_5" fill-rule="evenodd" clip-rule="evenodd" d="M2865.3 67.9987L2473 285.451C2409.42 320.697 2369.96 387.673 2369.96 460.375L2369.96 691.999L2739.96 691.998L2739.96 481.437C2739.96 408.736 2779.42 341.76 2843 306.513L3273.29 67.9987L2865.3 67.9987Z" fill="#52596E"></path>
+<g id="g_2">
+<rect id="rect_46" x="2395" y="1573" width="321" height="46" fill="black"></rect>
+<rect id="rect_47" x="2395" y="1573" width="24" height="46" fill="#E7442A"></rect>
+<path id="dotLine" opacity="0.3" d="M2439 1584H2697" stroke="#E7442A" stroke-width="6" stroke-dasharray="6 6"></path>
+<path id="dotLine_2" opacity="0.3" d="M2439 1596H2697" stroke="#E7442A" stroke-width="6" stroke-dasharray="6 6"></path>
+<path id="dotLine_3" opacity="0.3" d="M2439 1608H2697" stroke="#E7442A" stroke-width="6" stroke-dasharray="6 6"></path>
+<path id="dotLine_4" opacity="0.3" d="M2439 1584H2697" stroke="#E7442A" stroke-width="6" stroke-dasharray="6 6"></path>
+<path id="dotLine_5" opacity="0.3" d="M2439 1596H2697" stroke="#E7442A" stroke-width="6" stroke-dasharray="6 6"></path>
+<path id="dotLine_6" opacity="0.3" d="M2439 1608H2697" stroke="#E7442A" stroke-width="6" stroke-dasharray="6 6"></path>
+<path id="dotLine_7" opacity="0.3" d="M2439 1584H2697" stroke="#E7442A" stroke-width="6" stroke-dasharray="6 6"></path>
+<path id="dotLine_8" opacity="0.3" d="M2439 1596H2697" stroke="#E7442A" stroke-width="6" stroke-dasharray="6 6"></path>
+<path id="dotLine_9" opacity="0.3" d="M2439 1608H2697" stroke="#E7442A" stroke-width="6" stroke-dasharray="6 6"></path>
+</g>
+<g id="g_3">
+<rect id="rect_48" x="2395" y="1512" width="321" height="46" fill="black"></rect>
+<rect id="rect_49" x="2395" y="1512" width="24" height="46" fill="#FF977B"></rect>
+<path id="dotLine_10" opacity="0.3" d="M2439 1523H2697" stroke="#FF977B" stroke-width="6" stroke-dasharray="6 6"></path>
+<path id="dotLine_11" opacity="0.3" d="M2439 1535H2697" stroke="#FF977B" stroke-width="6" stroke-dasharray="6 6"></path>
+<path id="dotLine_12" opacity="0.3" d="M2439 1547H2697" stroke="#FF977B" stroke-width="6" stroke-dasharray="6 6"></path>
+<path id="dotLine_13" opacity="0.3" d="M2439 1523H2697" stroke="#FF977B" stroke-width="6" stroke-dasharray="6 6"></path>
+<path id="dotLine_14" opacity="0.3" d="M2439 1535H2697" stroke="#FF977B" stroke-width="6" stroke-dasharray="6 6"></path>
+<path id="dotLine_15" opacity="0.3" d="M2439 1547H2697" stroke="#FF977B" stroke-width="6" stroke-dasharray="6 6"></path>
+<path id="dotLine_16" opacity="0.3" d="M2439 1523H2697" stroke="#FF977B" stroke-width="6" stroke-dasharray="6 6"></path>
+<path id="dotLine_17" opacity="0.3" d="M2439 1535H2697" stroke="#FF977B" stroke-width="6" stroke-dasharray="6 6"></path>
+<path id="dotLine_18" opacity="0.3" d="M2439 1547H2697" stroke="#FF977B" stroke-width="6" stroke-dasharray="6 6"></path>
+</g>
+<g id="btnAbout">
+<rect id="rect_50" x="2370" y="695" width="370" height="118" fill="#52596E"></rect>
+<g id="g_4">
+<text id="TITAN.DS" fill="#9EA5BA" style="white-space:pre" font-size="48" letter-spacing="0.04em"><tspan x="2500.12" y="786.375">TITAN.DS</tspan></text>
+<rect id="rect_51" opacity="0.7" x="2678" y="748" width="36" height="36" rx="4" stroke="#9EA5BA" stroke-width="4"></rect>
+<path id="i" opacity="0.7" d="M2693.66 777V763H2698.89V777H2693.66ZM2693.65 759.005V754.197H2698.91V759.005H2693.65Z" fill="#9EA5BA"></path>
+</g>
+</g>
+<g id="g_5">
+<rect id="rect_52" x="2515" y="589" width="201" height="72" fill="black" stroke="#FF977B" stroke-opacity="0.67" stroke-width="3"></rect>
+<text id="rndText-d4-Z-taR_7" opacity="0.67" fill="#FF977B" style="white-space:pre" font-size="42" letter-spacing="0.02em"><tspan x="2624.42" y="643.328">3458</tspan></text>
+</g>
+<path id="block" d="M2370 47H2903L2885 57H2370V47Z" fill="black"></path>
+</g>
+<g id="frameRight">
+<g id="frameRightElements">
+<g id="lowerRightCorner1">
+<path id="Subtract_6" d="M5434.01 930.996L5434.01 1028M5004 1730L5406.85 1337.11C5424.22 1320.17 5434.01 1296.94 5434.01 1272.68L5434.01 1045" stroke="#52596E" stroke-width="4"></path>
+<path id="v_16" d="M5446.01 1061L5446.01 1083" stroke="#9EA5BA" stroke-width="6"></path>
+<path id="v_17" d="M5450.01 1045L5450.01 1123" stroke="#9EA5BA" stroke-width="3"></path>
+<g id="cornerDash0">
+<path id="offsetStop1_2" opacity="0.5" d="M5436 1045L5436 1251.5" stroke="#E7442A" stroke-width="8"></path>
+<path id="offsetStop0_2" opacity="0.5" d="M5436 1045L5436 1273.57C5436 1297.82 5426.21 1321.05 5408.85 1337.99L5233 1509.55" stroke="#E7442A" stroke-width="8"></path>
+<path id="dash_2" d="M5436 1045L5436 1273.57C5436 1297.82 5426.21 1321.05 5408.85 1337.99L5005.5 1731.5" stroke="#52596E" stroke-width="10" stroke-dasharray="78 8 29 200"></path>
+</g>
+</g>
+<path id="Union_3" fill-rule="evenodd" clip-rule="evenodd" d="M5333.5 1045H5232V1118H5333.5V1045ZM5405 1045H5336.5V1118H5405V1045Z" fill="#2F3749"></path>
+<g id="lowerRightCorner0">
+<path id="Exclude" d="M5004.01 1574.27L5004.01 1669.82L5380.78 1303.43C5396.27 1288.36 5405.01 1267.68 5405.01 1246.07L5405.01 1045L5336.5 1045L5336.5 1220.73C5336.5 1240.04 5328.7 1258.53 5314.85 1271.99L5004.01 1574.27Z" fill="#2F3749"></path>
+<path id="Exclude_2" d="M5333.5 1045L5232.01 1045L5232.01 1194.97C5232.01 1211.18 5225.45 1226.69 5213.84 1237.99L5004.01 1442.04L5004.01 1570.09L5312.76 1269.84C5326.02 1256.94 5333.5 1239.23 5333.5 1220.73L5333.5 1045Z" fill="#2F3749"></path>
+</g>
+<path id="v_18" d="M5453.01 1008L5445.01 1008M5432.01 1008L5440.01 1008" stroke="#52596E" stroke-width="4"></path>
+<path id="v_19" d="M5453.01 954.996L5445.01 954.996M5432.01 954.996L5440.01 954.996" stroke="#52596E" stroke-width="4"></path>
+<path id="l_3" d="M5451 1028L5451 905M5051 52.0005L5361 52.0005C5410.71 52.0005 5451 92.295 5451 142.001L5451 421" stroke="#52596E" stroke-width="4"></path>
+<path id="Subtract_7" fill-rule="evenodd" clip-rule="evenodd" d="M5333.51 342.996L5333.51 1028L5336.51 1028L5336.51 342.996L5405.01 342.996L5405.01 420.995L5349.01 420.995L5349.01 904.995L5405.01 904.995L5405.01 1028L5232.01 1028L5232.01 342.996L5333.51 342.996ZM5383.01 998.995L5357.01 998.995L5357.01 1015L5383.01 1015L5383.01 998.995Z" fill="#2F3749"></path>
+<path id="Subtract_8" fill-rule="evenodd" clip-rule="evenodd" d="M5345.01 88.9969L5051.01 88.9969L5051.01 103.497L5282.01 103.497C5312.11 103.497 5336.51 127.897 5336.51 157.997L5336.51 326.997L5405.01 326.997L5405.01 148.997C5405.01 115.86 5378.15 88.9969 5345.01 88.9969ZM5333.51 326.997L5333.51 157.997C5333.51 129.554 5310.45 106.497 5282.01 106.497L5051.01 106.497L5051.01 145L5192 145C5214.09 145 5232 162.909 5232 185L5232 326.997L5333.51 326.997ZM5357.01 297.997L5383.01 297.997L5383.01 313.997L5357.01 313.997L5357.01 297.997Z" fill="#2F3749"></path>
+<path id="line" d="M5434 931L5434 1028" stroke="#52596E" stroke-width="4"></path>
+<path id="lineRightOuterButtons" d="M5451 421V905" stroke="#52596E" stroke-width="4"></path>
+</g>
+<rect id="windowRightOuterButtons" opacity="0.2" x="5346" y="418" width="59" height="490" fill="#2F3749"></rect>
+<g id="groupRightOuterButtons">
+<g id="btnRightOuter4">
+<rect id="rect_53" x="5358" y="813" width="145" height="68" fill="#1E2229"></rect>
+<rect id="highlighter" x="5485" y="813" width="18" height="68" fill="#FF6753"></rect>
+<text id="rndText-namesA-Z-taR" fill="#9EA5BA" style="white-space:pre" font-size="38"><tspan x="5415.76" y="862.797">0/0</tspan></text>
+</g>
+<g id="btnRightOuter3">
+<rect id="rect_54" x="5358" y="721" width="145" height="68" fill="#1E2229"></rect>
+<rect id="highlighter_2" x="5485" y="721" width="18" height="68" fill="#FF6753"></rect>
+<text id="rndText-namesA-Z-taR_2" fill="#9EA5BA" style="white-space:pre" font-size="38"><tspan x="5415.76" y="770.797">0/0</tspan></text>
+</g>
+<g id="btnRightOuter2">
+<rect id="rect_55" x="5358" y="629" width="145" height="68" fill="#1E2229"></rect>
+<rect id="highlighter_3" x="5485" y="629" width="18" height="68" fill="#FF6753"></rect>
+<text id="rndText-namesA-Z-taR_3" fill="#9EA5BA" style="white-space:pre" font-size="38"><tspan x="5415.76" y="678.797">0/0</tspan></text>
+</g>
+<g id="btnRightOuter1">
+<rect id="rect_56" x="5358" y="537" width="145" height="68" fill="#1E2229"></rect>
+<rect id="highlighter_4" x="5485" y="537" width="18" height="68" fill="#FF6753"></rect>
+<text id="rndText-namesA-Z-taR_4" fill="#9EA5BA" style="white-space:pre" font-size="38"><tspan x="5415.76" y="586.797">0/0</tspan></text>
+</g>
+<g id="btnRightOuter0">
+<rect id="rect_57" x="5358" y="445" width="145" height="68" fill="#1E2229"></rect>
+<rect id="highlighter_5" x="5485" y="445" width="18" height="68" fill="#FF6753"></rect>
+<text id="rndText-namesA-Z-taR_5" fill="#9EA5BA" style="white-space:pre" font-size="38"><tspan x="5415.76" y="494.797">0/0</tspan></text>
+</g>
+</g>
+<text id="title" fill="#FF977B" style="white-space:pre" font-size="107" font-weight="100" letter-spacing="-0.02em"><tspan x="4641.6" y="143.336">SPACEDOCK</tspan></text>
+</g>
+<g id="groupRightInnerButtons">
+<g id="supportMsg">
+<path id="Union_4" opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M5187 712H5043V732H4958V747H5171V911H5043V897H4958V921H4958V933H5187V736V732V712Z" fill="#9EA5BA"></path>
+<text id="t-taR" opacity="0.9" fill="#FF977B" style="white-space:pre" font-size="34" letter-spacing="0.02em"><tspan x="4966.08" y="810.266">RECENT MEWHO </tspan><tspan x="5004.97" y="868.266">SUPPORTERS</tspan></text>
+</g>
+<g id="btnKofi" opacity="0.75">
+<rect id="rect_58" opacity="0.01" x="4958" y="602" width="229" height="72" fill="black"></rect>
+<rect id="rect_59" x="5004" y="602" width="183" height="72" fill="#DFE1E8"></rect>
+<text id="t-taR_2" fill="black" style="white-space:pre" font-size="36" font-weight="300"><tspan x="5058.11" y="654.781">VIA KO-FI</tspan></text>
+<rect id="rect_60" x="4958" y="602" width="27" height="72" fill="#FF6753"></rect>
+</g>
+<g id="btnPatreon" opacity="0.75">
+<rect id="rect_61" opacity="0.01" x="4958" y="506" width="229" height="72" fill="black"></rect>
+<rect id="rect_62" x="5004" y="506" width="183" height="72" fill="#DFE1E8"></rect>
+<text id="t-taR_3" fill="black" style="white-space:pre" font-size="36" font-weight="300"><tspan x="5020.67" y="558.781">VIA PATREON</tspan></text>
+<rect id="rect_63" x="4958" y="506" width="27" height="72" fill="#FF6753"></rect>
+</g>
+<g id="bigNumberIndicator" opacity="0.75">
+<path id="Union_5" fill-rule="evenodd" clip-rule="evenodd" d="M4958 357H4972V421H5187V425V435V445H5020V435H4958V357Z" fill="#6D748C"></path>
+<text id="rndText-d5-Z-taR" fill="#DFE1E8" style="white-space:pre" font-size="52" font-weight="300"><tspan x="4988" y="402.906">00903</tspan></text>
+</g>
+</g>
+<g id="groupLabels" opacity="0.8">
+<g id="g-9">
+<path id="line_2" d="M4397.5 1642.5L4776 1172H4958" stroke="#6D748C" stroke-width="4"></path>
+<path id="line_3" d="M4397.5 1642.5L4772.78 1176H4958" stroke="#6D748C" stroke-width="4"></path>
+<g id="label">
+<path id="rect_64" d="M4986 1170H5187V1218H4986V1170Z" fill="#6D748C"></path>
+<rect id="rect_65" x="4958" y="1170" width="12" height="48" fill="#6D748C"></rect>
+</g>
+<g id="numbers">
+<text id="rnd-taR" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="5052.96" y="1154.16">93254-3432 4234</tspan></text>
+<text id="rnd-taR_2" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="5052.96" y="1122.16">93254-3432 4234</tspan></text>
+<text id="rnd-taR_3" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="5052.96" y="1090.16">93254-3432 4234</tspan></text>
+</g>
+<text id="mainLabel-taR" fill="black" style="white-space:pre" font-size="24"><tspan x="5026.73" y="1205.69">CORE - 912.516/9</tspan></text>
+</g>
+<g id="g-8">
+<path id="line_4" d="M4477.5 1421L4836 1118H4958" stroke="#6D748C" stroke-width="4"></path>
+<path id="line_5" d="M4477.5 1421L4831.27 1122H4958" stroke="#6D748C" stroke-width="4"></path>
+<g id="label_2">
+<path id="rect_66" d="M4986 1116H5187V1164H4986V1116Z" fill="#6D748C"></path>
+<rect id="rect_67" x="4958" y="1116" width="12" height="48" fill="#6D748C"></rect>
+</g>
+<g id="numbers_2">
+<text id="rnd-taR_4" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="5052.96" y="1100.16">93254-3432 4234</tspan></text>
+<text id="rnd-taR_5" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="5052.96" y="1068.16">93254-3432 4234</tspan></text>
+<text id="rnd-taR_6" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="5052.96" y="1197.16">93254-3432 4234</tspan></text>
+</g>
+<text id="mainLabel-taR_2" fill="black" style="white-space:pre" font-size="24"><tspan x="5026.73" y="1151.69">CORE - 912.516/9</tspan></text>
+</g>
+<g id="g-7">
+<path id="line_6" d="M4431 1290.5L4816 1047H4958" stroke="#6D748C" stroke-width="4"></path>
+<path id="line_7" d="M4431 1290.5L4809.68 1051H4958" stroke="#6D748C" stroke-width="4"></path>
+<g id="label_3">
+<path id="rect_68" d="M4986 1045H5187V1093H4986V1045Z" fill="#6D748C"></path>
+<rect id="rect_69" x="4958" y="1045" width="12" height="48" fill="#6D748C"></rect>
+</g>
+<g id="numbers_3">
+<text id="rnd-taR_7" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="5052.96" y="1126.16">93254-3432 4234</tspan></text>
+<text id="rnd-taR_8" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="5052.96" y="1158.16">93254-3432 4234</tspan></text>
+<text id="rnd-taR_9" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="5052.96" y="1190.16">93254-3432 4234</tspan></text>
+</g>
+<text id="mainLabel-taR_3" fill="black" style="white-space:pre" font-size="24"><tspan x="5026.73" y="1080.69">CORE - 912.516/9</tspan></text>
+</g>
+<g id="g-6">
+<path id="line_8" d="M4616 1101H4958" stroke="#6D748C" stroke-width="4"></path>
+<path id="line_9" d="M4616 1101H4761L4765 1105H4958" stroke="#6D748C" stroke-width="4"></path>
+<g id="label_4">
+<path id="rect_70" d="M4986 1099H5187V1147H4986V1099Z" fill="#6D748C"></path>
+<rect id="rect_71" x="4958" y="1099" width="12" height="48" fill="#6D748C"></rect>
+</g>
+<g id="numbers_4">
+<text id="rnd-taR_10" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="5052.96" y="1212.16">93254-3432 4234</tspan></text>
+<text id="rnd-taR_11" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="5052.96" y="1180.16">93254-3432 4234</tspan></text>
+<text id="rnd-taR_12" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="5052.96" y="1083.16">93254-3432 4234</tspan></text>
+<text id="rnd-taR_13" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="5052.96" y="1051.16">93254-3432 4234</tspan></text>
+<text id="rnd-taR_14" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="5052.96" y="1019.16">93254-3432 4234</tspan></text>
+</g>
+<text id="mainLabel-taR_4" fill="black" style="white-space:pre" font-size="24"><tspan x="5026.73" y="1134.69">CORE - 912.516/9</tspan></text>
+</g>
+<g id="g-5">
+<path id="line_10" d="M4130 1005L3768 665H3666" stroke="#52596E" stroke-width="4"></path>
+<path id="line_11" d="M4130 1005L3772.26 669L3666 669" stroke="#52596E" stroke-width="4"></path>
+<g id="label_5">
+<path id="rect_72" d="M3437 623H3638V671H3437V623Z" fill="#52596E"></path>
+<rect id="rect_73" x="3654" y="623" width="12" height="48" fill="#52596E"></rect>
+</g>
+<g id="numbers_5">
+<text id="rnd-taR_15" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="3503.96" y="606.156">93254-3432 4234</tspan></text>
+<text id="rnd-taR_16" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="3503.96" y="574.156">93254-3432 4234</tspan></text>
+<text id="rnd-taR_17" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="3503.96" y="542.156">93254-3432 4234</tspan></text>
+</g>
+<text id="mainLabel-taR_5" fill="black" style="white-space:pre" font-size="24"><tspan x="3477.73" y="658.688">CORE - 912.516/9</tspan></text>
+</g>
+<g id="g-4">
+<path id="line_12" d="M4520.5 922L4726 986H4958" stroke="#6D748C" stroke-width="4"></path>
+<path id="line_13" d="M4520.5 922L4713.16 982H4958" stroke="#6D748C" stroke-width="4"></path>
+<g id="label_6">
+<path id="rect_74" d="M4986 980H5187V1028H4986V980Z" fill="#6D748C"></path>
+<rect id="rect_75" x="4958" y="980" width="12" height="48" fill="#6D748C"></rect>
+</g>
+<g id="numbers_6">
+<text id="rnd-taR_18" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="5052.96" y="1061.16">93254-3432 4234</tspan></text>
+<text id="rnd-taR_19" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="5052.96" y="1093.16">93254-3432 4234</tspan></text>
+<text id="rnd-taR_20" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="5052.96" y="1125.16">93254-3432 4234</tspan></text>
+</g>
+<text id="mainLabel-taR_6" fill="black" style="white-space:pre" font-size="24"><tspan x="5026.73" y="1015.69">CORE - 912.516/9</tspan></text>
+</g>
+<g id="g-3">
+<path id="line_14" d="M3978.5 788L3708 630H3666" stroke="#52596E" stroke-width="4"></path>
+<path id="line_15" d="M3978.5 788L3714.85 634L3666 634" stroke="#52596E" stroke-width="4"></path>
+<g id="label_7">
+<path id="rect_76" d="M3437 588H3638V636H3437V588Z" fill="#52596E"></path>
+<rect id="rect_77" x="3654" y="588" width="12" height="48" fill="#52596E"></rect>
+</g>
+<g id="numbers_7">
+<text id="rnd-taR_21" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="3503.96" y="669.156">93254-3432 4234</tspan></text>
+<text id="rnd-taR_22" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="3503.96" y="571.156">93254-3432 4234</tspan></text>
+<text id="rnd-taR_23" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="3503.96" y="539.156">93254-3432 4234</tspan></text>
+</g>
+<text id="mainLabel-taR_7" fill="black" style="white-space:pre" font-size="24"><tspan x="3477.73" y="623.688">CORE - 912.516/9</tspan></text>
+</g>
+<g id="g-2">
+<path id="line_16" d="M3785 617.5L3718 520H3666" stroke="#52596E" stroke-width="4"></path>
+<path id="line_17" d="M3785 617.5L3720.75 524L3666 524" stroke="#52596E" stroke-width="4"></path>
+<g id="label_8">
+<path id="rect_78" d="M3437 478H3638V526H3437V478Z" fill="#52596E"></path>
+<rect id="rect_79" x="3654" y="478" width="12" height="48" fill="#52596E"></rect>
+</g>
+<g id="numbers_8">
+<text id="rnd-taR_24" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="3503.96" y="623.156">93254-3432 4234</tspan></text>
+<text id="rnd-taR_25" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="3503.96" y="591.156">93254-3432 4234</tspan></text>
+<text id="rnd-taR_26" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="3503.96" y="559.156">93254-3432 4234</tspan></text>
+</g>
+<text id="mainLabel-taR_8" fill="black" style="white-space:pre" font-size="24"><tspan x="3477.73" y="513.688">CORE - 912.516/9</tspan></text>
+</g>
+<g id="g-1">
+<path id="line_18" d="M3898 526H3666" stroke="#52596E" stroke-width="4"></path>
+<path id="line_19" d="M3898 526H3752L3724 530H3666" stroke="#52596E" stroke-width="4"></path>
+<g id="label_9">
+<path id="rect_80" d="M3437 524H3638V572H3437V524Z" fill="#52596E"></path>
+<rect id="rect_81" x="3654" y="524" width="12" height="48" fill="#52596E"></rect>
+</g>
+<g id="numbers_9">
+<text id="rnd-taR_27" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="3503.96" y="669.156">93254-3432 4234</tspan></text>
+<text id="rnd-taR_28" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="3503.96" y="637.156">93254-3432 4234</tspan></text>
+<text id="rnd-taR_29" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="3503.96" y="605.156">93254-3432 4234</tspan></text>
+<text id="rnd-taR_30" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="3503.96" y="508.156">93254-3432 4234</tspan></text>
+<text id="rnd-taR_31" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="3503.96" y="476.156">93254-3432 4234</tspan></text>
+</g>
+<text id="mainLabel-taR_9" fill="black" style="white-space:pre" font-size="24"><tspan x="3477.73" y="559.688">CORE - 912.516/9</tspan></text>
+</g>
+<g id="g-0">
+<path id="line_20" d="M4134 397L3866.5 471.99L3666 472" stroke="#52596E" stroke-width="4"></path>
+<path id="line_21" d="M4134 397L3880.73 468L3666 468" stroke="#52596E" stroke-width="4"></path>
+<g id="label_10">
+<path id="rect_82" d="M3437 466H3638V514H3437V466Z" fill="#52596E"></path>
+<rect id="rect_83" x="3654" y="466" width="12" height="48" fill="#52596E"></rect>
+</g>
+<g id="numbers_10">
+<text id="rnd-taR_32" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="3503.96" y="579.156">93254-3432 4234</tspan></text>
+<text id="rnd-taR_33" fill="#9EA5BA" style="white-space:pre" font-size="20"><tspan x="3503.96" y="547.156">93254-3432 4234</tspan></text>
+</g>
+<text id="mainLabel-taR_10" fill="black" style="white-space:pre" font-size="24"><tspan x="3477.73" y="501.688">CORE - 912.516/9</tspan></text>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>

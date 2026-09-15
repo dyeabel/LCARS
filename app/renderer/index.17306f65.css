@@ -1,0 +1,1 @@
+#loadingStatus svg{width:600px;max-width:100%;height:auto}#loadingUi{opacity:0}html[data-audio] #loadingStatus #btnAudioEnable,html:not([data-audio]) #loadingStatus #btnAudioDisable{fill:var(--cyanDark);fill-opacity:.67}

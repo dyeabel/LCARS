@@ -1,0 +1,17 @@
+<svg width="1300" height="800" viewBox="0 0 1300 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="starbase-miscLcars1">
+<rect id="rect" opacity="0.6" width="1300" height="549" transform="matrix(1 0 0 -1 0 549)" fill="black"></rect>
+<path id="rnd-blink" fill-rule="evenodd" clip-rule="evenodd" d="M648 428H679V208H648V428ZM638 428H370V288C370 243.817 405.817 208 450 208H638V428ZM526 400H603V368H526V400ZM603 341H565V317H603V341Z" fill="#37A6D1"></path>
+<line id="rnd-blink_2" x1="75" y1="388" x2="246" y2="388" stroke="#2A7193" stroke-width="80" stroke-dasharray="24 24"></line>
+<g id="g">
+<path id="rnd-blink_3" fill-rule="evenodd" clip-rule="evenodd" d="M751 368H1201V428H751V368ZM1130 391H1164V415H1130V391ZM1106 395H1064V409H1106V395Z" fill="#1E2229"></path>
+<path id="rnd-blink_4" fill-rule="evenodd" clip-rule="evenodd" d="M1201 288H751V348H1201V288ZM1164 311H1147V339H1164V311ZM1050 323H1134V339H1050V323ZM1032 315H997V339H1032V315Z" fill="#2A7193"></path>
+<path id="rnd" fill-rule="evenodd" clip-rule="evenodd" d="M1201 208H751V268H1201V208ZM1164 229H1087V252H1164V229Z" fill="#6D748C"></path>
+</g>
+<path id="rnd-blink_5" fill-rule="evenodd" clip-rule="evenodd" d="M95 148C78.4315 148 65 161.431 65 178C65 194.569 78.4315 208 95 208H263C279.569 208 293 194.569 293 178C293 161.431 279.569 148 263 148H95ZM238 185H202V198H238V185Z" fill="#6D748C"></path>
+<line id="rnd-blink_6" x1="664" y1="163" x2="1201" y2="163" stroke="#2A7193" stroke-width="30" stroke-dasharray="16 36"></line>
+<rect id="brightRndBar" y="549" width="1300" height="51" fill="#52596E"></rect>
+<rect id="brightRndBar_2" width="1300" height="32" fill="#52596E"></rect>
+<rect id="rect_2" x="8" y="97" width="1284" height="386" rx="60" stroke="#52596E" stroke-width="16"></rect>
+</g>
+</svg>

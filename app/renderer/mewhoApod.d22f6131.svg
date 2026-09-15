@@ -1,0 +1,331 @@
+<svg width="7708" height="2196" viewBox="0 0 7708 2196" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="mewhoApod">
+<rect width="7708" height="2196" fill="black"></rect>
+<g id="Apod">
+<path id="refBgBox" d="M7708 0H0V2196H7708V0Z" fill="black"></path>
+<rect id="htmlContainerRefBox" opacity="0.1" x="2237" y="852" width="3440" height="902" fill="#D9D9D9"></rect>
+<g id="ui">
+<g id="uiPanelBottom">
+<g id="scanLines">
+<path id="scanLine4" opacity="0.5" d="M2998 1692.14L5454.29 1692.14" stroke="#9EA5BA" stroke-width="7" stroke-dasharray="7 136"></path>
+<path id="scanLine2" opacity="0.4" d="M2998 1694.86L5458 1694.86" stroke="#2A7193" stroke-width="22" stroke-dasharray="5 79"></path>
+<path id="scanLine1" opacity="0.7" d="M2998 1692.14L5454.29 1692.14" stroke="#9EA5BA" stroke-width="7" stroke-dasharray="1 12"></path>
+<path id="scanLine0" opacity="0.7" d="M2998 1694.86L5454.29 1694.86" stroke="#6D748C" stroke-width="20" stroke-dasharray="1 46"></path>
+</g>
+<g id="miscRandomBtns" opacity="0.8">
+<g id="uiPanelMidBottom">
+<rect id="rndTick" x="4143" y="1781" width="16" height="24" fill="#9EA5BA"></rect>
+<rect id="rndTick_2" x="4143" y="1747" width="16" height="24" fill="#9EA5BA"></rect>
+<rect id="rndTick_3" x="4127" y="1781" width="8" height="24" fill="#9EA5BA"></rect>
+<rect id="rndTick_4" x="4127" y="1747" width="8" height="24" fill="#9EA5BA"></rect>
+<g id="btnRnd">
+<rect id="base" x="3995" y="1781" width="108" height="24" fill="#52596E"></rect>
+<text id="rndTxt-taR" fill="white" style="white-space:pre" font-size="12" letter-spacing="0.02em"><tspan x="4056.7" y="1798.09">10-000</tspan></text>
+</g>
+<g id="btnRnd_2">
+<rect id="base_2" x="3995" y="1747" width="108" height="24" fill="#52596E"></rect>
+<text id="rndTxt-taR_2" fill="white" style="white-space:pre" font-size="12" letter-spacing="0.02em"><tspan x="4056.7" y="1764.09">10-000</tspan></text>
+</g>
+<rect id="rndTick_5" x="3977" y="1781" width="8" height="24" fill="#9EA5BA"></rect>
+<rect id="rndTick_6" x="3977" y="1747" width="8" height="24" fill="#9EA5BA"></rect>
+<g id="btnRnd_3">
+<path id="base_3" d="M3761 1781H3949V1805H3761V1781Z" fill="#52596E"></path>
+<text id="rndTxt-taR_3" fill="white" style="white-space:pre" font-size="12" letter-spacing="0.02em"><tspan x="3825.98" y="1798.09">1100 : 110000 - ABC :: A</tspan></text>
+</g>
+<g id="btnRnd_4">
+<path id="base_4" d="M3761 1747H3949V1771H3761V1747Z" fill="#52596E"></path>
+<text id="rndTxt-taR_4" fill="white" style="white-space:pre" font-size="12" letter-spacing="0.02em"><tspan x="3868.24" y="1764.09">A / 1100.0 GHz</tspan></text>
+</g>
+<g id="btnRnd_5">
+<rect id="base_5" x="3675" y="1781" width="74" height="24" rx="12" fill="#52596E"></rect>
+<text id="rndTxt-taR_5" fill="white" style="white-space:pre" font-size="12" letter-spacing="0.02em"><tspan x="3702.7" y="1798.09">10-000</tspan></text>
+</g>
+<g id="btnRnd_6">
+<rect id="base_6" x="3675" y="1747" width="74" height="24" rx="12" fill="#52596E"></rect>
+<text id="rndTxt-taR_6" fill="white" style="white-space:pre" font-size="12" letter-spacing="0.02em"><tspan x="3702.7" y="1764.09">10-000</tspan></text>
+</g>
+<path id="frame" fill-rule="evenodd" clip-rule="evenodd" d="M4159 1720H3675V1730H4159V1720ZM4159 1822H3675V1827H4159V1822Z" fill="#2F3749"></path>
+</g>
+<g id="btnRnd_7">
+<path id="base_7" d="M3528 1781H3622C3628.63 1781 3634 1786.37 3634 1793C3634 1799.63 3628.63 1805 3622 1805H3528V1781Z" fill="#52596E"></path>
+<text id="rndTxt-taR_7" fill="white" style="white-space:pre" font-size="12" letter-spacing="0.02em"><tspan x="3569.97" y="1798.09">11100 &#x2022; 00</tspan></text>
+</g>
+<g id="btnRnd_8">
+<path id="base_8" d="M3528 1747H3622C3628.63 1747 3634 1752.37 3634 1759C3634 1765.63 3628.63 1771 3622 1771H3528V1747Z" fill="#52596E"></path>
+<text id="rndTxt-taR_8" fill="white" style="white-space:pre" font-size="12" letter-spacing="0.02em"><tspan x="3569.97" y="1764.09">11100 &#x2022; 00</tspan></text>
+</g>
+<rect id="rndTick_7" x="3510" y="1781" width="8" height="24" fill="#9EA5BA"></rect>
+<rect id="rndTick_8" x="3510" y="1747" width="8" height="24" fill="#9EA5BA"></rect>
+<g id="btnRnd_9">
+<rect id="base_9" x="3415" y="1781" width="86" height="24" fill="#52596E"></rect>
+<text id="rndTxt-taR_9" fill="white" style="white-space:pre" font-size="12" letter-spacing="0.02em"><tspan x="3454.7" y="1798.09">10-000</tspan></text>
+</g>
+<g id="btnRnd_10">
+<rect id="base_10" x="3415" y="1747" width="86" height="24" fill="#52596E"></rect>
+<text id="rndTxt-taR_10" fill="white" style="white-space:pre" font-size="12" letter-spacing="0.02em"><tspan x="3454.7" y="1764.09">10-000</tspan></text>
+</g>
+<g id="btnRnd_11">
+<rect id="base_11" x="3279" y="1781" width="120" height="24" fill="#52596E"></rect>
+<text id="rndTxt-taR_11" fill="white" style="white-space:pre" font-size="12" letter-spacing="0.02em"><tspan x="3324.47" y="1798.09">10 - 000 / AB</tspan></text>
+</g>
+<g id="btnRnd_12">
+<rect id="base_12" x="3279" y="1747" width="120" height="24" fill="#52596E"></rect>
+<text id="rndTxt-taR_12" fill="white" style="white-space:pre" font-size="12" letter-spacing="0.02em"><tspan x="3324.47" y="1764.09">10 - 000 / AB</tspan></text>
+</g>
+<rect id="rndTick_9" x="3263" y="1781" width="8" height="24" fill="#9EA5BA"></rect>
+<rect id="rndTick_10" x="3263" y="1747" width="8" height="24" fill="#9EA5BA"></rect>
+<g id="btnRnd_13">
+<path id="base_13" d="M3186 1793C3186 1786.37 3191.37 1781 3198 1781H3258V1805H3198C3191.37 1805 3186 1799.63 3186 1793Z" fill="#52596E"></path>
+<text id="rndTxt-taR_13" fill="white" style="white-space:pre" font-size="12" letter-spacing="0.02em"><tspan x="3211.7" y="1798.09">10-000</tspan></text>
+</g>
+<g id="btnRnd_14">
+<path id="base_14" d="M3186 1759C3186 1752.37 3191.37 1747 3198 1747H3258V1771H3198C3191.37 1771 3186 1765.63 3186 1759Z" fill="#52596E"></path>
+<text id="rndTxt-taR_14" fill="white" style="white-space:pre" font-size="12" letter-spacing="0.02em"><tspan x="3211.7" y="1764.09">10-000</tspan></text>
+</g>
+<g id="btnRnd_15">
+<rect id="base_15" x="3064" y="1781" width="72" height="24" rx="12" fill="#52596E"></rect>
+<text id="rndTxt-taR_15" fill="white" style="white-space:pre" font-size="12" letter-spacing="0.02em"><tspan x="3104.51" y="1798.09">100</tspan></text>
+</g>
+<g id="btnRnd_16">
+<rect id="base_16" x="3064" y="1747" width="72" height="24" rx="12" fill="#52596E"></rect>
+<text id="rndTxt-taR_16" fill="white" style="white-space:pre" font-size="12" letter-spacing="0.02em"><tspan x="3104.51" y="1764.09">100</tspan></text>
+</g>
+<g id="btnRnd_17">
+<rect id="base_17" x="2937" y="1781" width="118" height="24" rx="12" fill="#52596E"></rect>
+<text id="rndTxt-taR_17" fill="white" style="white-space:pre" font-size="12" letter-spacing="0.02em"><tspan x="2990.97" y="1798.09">11100 &#x2022; 00</tspan></text>
+</g>
+<g id="btnRnd_18">
+<rect id="base_18" x="2937" y="1747" width="118" height="24" rx="12" fill="#52596E"></rect>
+<text id="rndTxt-taR_18" fill="white" style="white-space:pre" font-size="12" letter-spacing="0.02em"><tspan x="2990.97" y="1764.09">11100 &#x2022; 00</tspan></text>
+</g>
+<rect id="rndTick_11" x="2920" y="1781" width="11" height="24" fill="#9EA5BA"></rect>
+<rect id="rndTick_12" x="2920" y="1747" width="11" height="24" fill="#9EA5BA"></rect>
+<path id="frame_2" fill-rule="evenodd" clip-rule="evenodd" d="M2938 1717H3053V1726H3634V1730H3053H2971H2938V1717ZM3634 1822H2939V1827H3634V1822Z" fill="#2F3749"></path>
+<path id="frame_3" fill-rule="evenodd" clip-rule="evenodd" d="M4563 1722H4836V1725H5216V1727H4836H4794H4563V1722ZM4534 1725H4153V1727H4534V1725Z" fill="#2F3749"></path>
+<path id="frame_4" fill-rule="evenodd" clip-rule="evenodd" d="M5350 1718H4871V1722H5350V1728H5458V1722V1718H5350Z" fill="#1E2229"></path>
+<g id="scanPanel">
+<rect id="r" x="2938" y="1705" width="6" height="6" fill="#2A7193"></rect>
+<rect id="r_2" opacity="0.8" x="2951" y="1705" width="6" height="6" fill="#2A7193"></rect>
+<rect id="r_3" opacity="0.65" x="2964" y="1705" width="7" height="6" fill="#2A7193"></rect>
+<rect id="r_4" opacity="0.5" x="2978" y="1705" width="7" height="6" fill="#2A7193"></rect>
+<path id="Subtract" fill-rule="evenodd" clip-rule="evenodd" d="M3053 1668H2938V1699H2985V1677H3053V1668Z" fill="#2F3749"></path>
+<text id="rndTxt" fill="#9EA5BA" style="white-space:pre" font-size="10" letter-spacing="0.08em"><tspan x="3059.58" y="1678.58">11100 &#x2022; 00</tspan></text>
+<text id="rndTxt-taR_19" fill="#52596E" style="white-space:pre" font-size="10" letter-spacing="0.08em"><tspan x="3216" y="1678.58">11100 &#x2022; 00</tspan></text>
+<text id="rndTxt-taR_20" fill="#6D748C" style="white-space:pre" font-size="10" letter-spacing="0.08em"><tspan x="3365" y="1678.58">11100 &#x2022; 00</tspan></text>
+<text id="rndTxt-taR_21" fill="#6D748C" style="white-space:pre" font-size="10" letter-spacing="0.08em"><tspan x="3700" y="1678.58">11100 &#x2022; 00</tspan></text>
+<text id="rndTxt-taR_22" fill="#52596E" style="white-space:pre" font-size="10" letter-spacing="0.08em"><tspan x="4054" y="1678.58">11100 &#x2022; 00</tspan></text>
+<text id="rndTxt_2" fill="#6D748C" style="white-space:pre" font-size="10" letter-spacing="0.08em"><tspan x="4173" y="1678.58">11100 &#x2022; 00</tspan></text>
+<text id="rndTxt-taR_23" fill="#6D748C" style="white-space:pre" font-size="10" letter-spacing="0.08em"><tspan x="4459" y="1678.58">11100 &#x2022; 00</tspan></text>
+<text id="rndTxt-taR_24" fill="#9EA5BA" style="white-space:pre" font-size="10" letter-spacing="0.08em"><tspan x="4899" y="1678.58">11100 &#x2022; 00</tspan></text>
+<text id="rndTxt_3" fill="#52596E" style="white-space:pre" font-size="10" letter-spacing="0.08em"><tspan x="4985" y="1678.58">11100 &#x2022; 00</tspan></text>
+<text id="rndTxt-taR_25" fill="#6D748C" style="white-space:pre" font-size="10" letter-spacing="0.08em"><tspan x="5270" y="1678.58">11100 &#x2022; 00</tspan></text>
+<text id="rndTxt-taR_26" fill="#6D748C" style="white-space:pre" font-size="10" letter-spacing="0.08em"><tspan x="5413" y="1678.58">11100 &#x2022; 00</tspan></text>
+</g>
+</g>
+<g id="textGrid01" opacity="0.8">
+<g id="col08-start-box-" opacity="0.3">
+<path id="row02_6" d="M5457.8 1801.13H5428.2V1810.73H5457.8V1801.13Z" fill="#6D748C"></path>
+<path id="row01_6" d="M5457.8 1773.53H5428.2V1783.13H5457.8V1773.53Z" fill="#6D748C"></path>
+<path id="row00_6" d="M5457.8 1745.93H5428.2V1755.53H5457.8V1745.93Z" fill="#6D748C"></path>
+</g>
+<g id="col07-end-D3t5pD2-">
+<text id="row02" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="5410.6" y="1811.12">0</tspan></text>
+<text id="row01" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="5410.6" y="1783.12">0</tspan></text>
+<text id="row00" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="5410.6" y="1755.12">0</tspan></text>
+</g>
+<g id="col06-start-box-">
+<path id="row02_6_2" d="M5322.6 1797.13H5308.2V1811.53H5322.6V1797.13Z" fill="#6D748C"></path>
+<path id="row01_6_2" d="M5322.6 1768.73H5308.2V1783.13H5322.6V1768.73Z" fill="#6D748C"></path>
+<path id="row00_6_2" d="M5322.6 1740.33H5308.2V1754.73H5322.6V1740.33Z" fill="#6D748C"></path>
+</g>
+<g id="col05-end-D3bsbD2t4-">
+<text id="row02_2" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="5297.8" y="1811.12">0</tspan></text>
+<text id="row01_2" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="5297.8" y="1783.12">0</tspan></text>
+<text id="row00_2" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="5297.8" y="1755.12">0</tspan></text>
+</g>
+<g id="col04-start-D3-">
+<text id="row02_3" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="5173.8" y="1811.12">0</tspan></text>
+<text id="row01_3" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="5173.8" y="1783.12">0</tspan></text>
+<text id="row00_3" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="5173.8" y="1755.12">0</tspan></text>
+</g>
+<g id="col03-end-D2t6SpaceDotSpaceD5-">
+<text id="row02_4" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="5150.6" y="1811.12">0</tspan></text>
+<text id="row01_4" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="5150.6" y="1783.12">0</tspan></text>
+<text id="row00_4" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="5150.6" y="1755.12">0</tspan></text>
+</g>
+<g id="col02-start-D3t5pD2-">
+<text id="row02_5" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="4985" y="1811.12">0</tspan></text>
+<text id="row01_5" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="4985" y="1783.12">0</tspan></text>
+<text id="row00_5" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="4985" y="1755.12">0</tspan></text>
+</g>
+<g id="col01-start-box-">
+<path id="row02_6_3" d="M4954.6 1797.13H4940.2V1811.53H4954.6V1797.13Z" fill="#6D748C"></path>
+<path id="row01_6_3" d="M4954.6 1768.73H4940.2V1783.13H4954.6V1768.73Z" fill="#6D748C"></path>
+<path id="row00_6_3" d="M4954.6 1740.33H4940.2V1754.73H4954.6V1740.33Z" fill="#6D748C"></path>
+</g>
+<g id="col00-end-D3t5pD2-">
+<text id="row02_2_2" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="4925" y="1811.12">0</tspan></text>
+<text id="row01_2_2" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="4925" y="1783.12">0</tspan></text>
+<text id="row00_2_2" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="4925" y="1755.12">0</tspan></text>
+</g>
+</g>
+<g id="textGrid00" opacity="0.8">
+<g id="col10-start-D3-">
+<text id="row02_3_2" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="4815.8" y="1811.12">0</tspan></text>
+<text id="row01_3_2" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="4815.8" y="1783.12">0</tspan></text>
+<text id="row00_3_2" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="4815.8" y="1755.12">0</tspan></text>
+</g>
+<g id="col09-start-box-" opacity="0.3">
+<path id="row02_6_4" d="M4801.8 1801.13H4772.2V1810.73H4801.8V1801.13Z" fill="#6D748C"></path>
+<path id="row01_6_4" d="M4801.8 1773.53H4772.2V1783.13H4801.8V1773.53Z" fill="#6D748C"></path>
+<path id="row00_6_4" d="M4801.8 1745.93H4772.2V1755.53H4801.8V1745.93Z" fill="#6D748C"></path>
+</g>
+<g id="col08-end-D3t5pD2-">
+<text id="row02_7" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="4756.6" y="1811.12">0</tspan></text>
+<text id="row01_7" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="4756.6" y="1783.12">0</tspan></text>
+<text id="row00_7" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="4756.6" y="1755.12">0</tspan></text>
+</g>
+<g id="col07-start-box-">
+<circle id="row02_6_5" cx="4674.5" cy="1804.23" r="5.5" fill="#6D748C"></circle>
+<circle id="row01_6_5" cx="4674.5" cy="1775.83" r="5.5" fill="#6D748C"></circle>
+<circle id="row00_6_5" cx="4674.5" cy="1747.43" r="5.5" fill="#6D748C"></circle>
+</g>
+<g id="col06-start-box-_2">
+<circle id="row02_6_6" cx="4652.5" cy="1804.23" r="5.5" fill="#6D748C"></circle>
+<circle id="row01_6_6" cx="4652.5" cy="1775.83" r="5.5" fill="#6D748C"></circle>
+<circle id="row00_6_6" cx="4652.5" cy="1747.43" r="5.5" fill="#6D748C"></circle>
+</g>
+<g id="col05-end-D3bsbD2t4-_2">
+<text id="row02_2_3" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="4633.8" y="1811.12">0</tspan></text>
+<text id="row01_2_3" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="4633.8" y="1783.12">0</tspan></text>
+<text id="row00_2_3" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="4633.8" y="1755.12">0</tspan></text>
+</g>
+<g id="col04-start-D3-_2">
+<text id="row02_3_3" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="4509.8" y="1811.12">0</tspan></text>
+<text id="row01_3_3" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="4509.8" y="1783.12">0</tspan></text>
+<text id="row00_3_3" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="4509.8" y="1755.12">0</tspan></text>
+</g>
+<g id="col03-end-D2t6SpaceDotSpaceD5-_2">
+<text id="row02_4_2" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="4486.6" y="1811.12">0</tspan></text>
+<text id="row01_4_2" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="4486.6" y="1783.12">0</tspan></text>
+<text id="row00_4_2" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="4486.6" y="1755.12">0</tspan></text>
+</g>
+<g id="col02-start-D3t5pD2-_2">
+<text id="row02_5_2" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="4301" y="1811.12">0</tspan></text>
+<text id="row01_5_2" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="4301" y="1783.12">0</tspan></text>
+<text id="row00_5_2" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="4301" y="1755.12">0</tspan></text>
+</g>
+<g id="col01-start-box-_2">
+<path id="row02_6_7" d="M4270.6 1797.13H4256.2V1811.53H4270.6V1797.13Z" fill="#6D748C"></path>
+<path id="row01_6_7" d="M4270.6 1768.73H4256.2V1783.13H4270.6V1768.73Z" fill="#6D748C"></path>
+<path id="row00_6_7" d="M4270.6 1740.33H4256.2V1754.73H4270.6V1740.33Z" fill="#6D748C"></path>
+</g>
+<g id="col00-end-D3t5pD2-_2">
+<text id="row02_2_4" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="4241" y="1811.12">0</tspan></text>
+<text id="row01_2_4" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="4241" y="1783.12">0</tspan></text>
+<text id="row00_2_4" fill="#2A7193" style="white-space:pre" font-size="16" font-weight="600"><tspan x="4241" y="1755.12">0</tspan></text>
+</g>
+</g>
+</g>
+<g id="btnShipGridToggle">
+<rect id="hitarea" opacity="0.01" x="2755" y="1668" width="176" height="62" fill="black"></rect>
+<path id="union" fill-rule="evenodd" clip-rule="evenodd" d="M2920 1668H2931V1730H2920V1668ZM2916 1668H2755V1730H2916V1668ZM2769 1704H2777V1712H2769V1704ZM2777 1687H2769V1695H2777V1687ZM2786 1687H2794V1695H2786V1687Z" fill="#52596E"></path>
+<text id="t" fill="black" style="white-space:pre" font-size="32" font-weight="600" letter-spacing="0.02em"><tspan x="2830.75" y="1713.75">GRIDS</tspan></text>
+</g>
+<g id="btnSourceLink">
+<rect id="hitarea_2" opacity="0.01" x="5585" y="51" width="171" height="66" fill="black"></rect>
+<path id="Union" fill-rule="evenodd" clip-rule="evenodd" d="M5585 50H5756V54H5585V50ZM5585 116H5756V120H5585V116ZM5606 64C5594.4 64 5585 73.402 5585 85C5585 96.598 5594.4 106 5606 106H5735C5746.6 106 5756 96.598 5756 85C5756 73.402 5746.6 64 5735 64H5606Z" fill="#2F3749"></path>
+<text id="t_2" fill="#9EA5BA" style="white-space:pre" font-size="23" letter-spacing="0.03em"><tspan x="5621.59" y="94.6797">SOURCE LINK</tspan></text>
+</g>
+</g>
+<g id="loaderDisplay">
+<g id="loaderUiOuter">
+<path id="Subtract_2" opacity="0.6" fill-rule="evenodd" clip-rule="evenodd" d="M3531 1413H2921V1509C2921 1548.76 2953.24 1581 2993 1581H3754V1509H3595C3559.65 1509 3531 1480.35 3531 1445V1413Z" fill="#1C3C55"></path>
+<path id="Subtract_3" opacity="0.6" fill-rule="evenodd" clip-rule="evenodd" d="M3717.76 1413H3582V1433C3582 1465.03 3607.97 1491 3640 1491H3754V1431H3741C3729.82 1431 3720.42 1423.35 3717.76 1413Z" fill="#1C3C55"></path>
+<rect id="r_5" opacity="0.6" x="4118" y="1431" width="520" height="60" fill="#1C3C55"></rect>
+<rect id="r_6" opacity="0.6" x="3936" y="1431" width="134" height="60" fill="#1C3C55"></rect>
+<rect id="r_7" opacity="0.6" x="3778" y="1431" width="134" height="60" fill="#1C3C55"></rect>
+<path id="r_8" opacity="0.6" d="M4662 1431H4692C4708.57 1431 4722 1444.43 4722 1461C4722 1477.57 4708.57 1491 4692 1491H4662V1431Z" fill="#1C3C55"></path>
+<rect id="r_9" opacity="0.6" x="4662" y="1509" width="122" height="72" fill="#1C3C55"></rect>
+<path id="r_10" opacity="0.6" d="M4808 1509H4852C4871.88 1509 4888 1525.12 4888 1545V1545C4888 1564.88 4871.88 1581 4852 1581H4808V1509Z" fill="#1C3C55"></path>
+<rect id="r_11" opacity="0.95" x="3778" y="1509" width="134" height="72" fill="#1C3C55"></rect>
+<rect id="r_12" opacity="0.95" x="3936" y="1509" width="134" height="72" fill="#1C3C55"></rect>
+<rect id="r_13" opacity="0.95" x="4118" y="1509" width="520" height="72" fill="#1C3C55"></rect>
+<text id="rndNum" fill="black" style="white-space:pre" font-size="36" font-weight="bold"><tspan x="3794" y="1565.28">00</tspan></text>
+<text id="rndNum_2" fill="black" style="white-space:pre" font-size="36" font-weight="bold"><tspan x="3952" y="1565.28">000</tspan></text>
+<text id="rndNum_3" fill="black" style="white-space:pre" font-size="36" font-weight="bold"><tspan x="4134" y="1565.28">0000</tspan></text>
+<text id="rndNum_4" fill="black" style="white-space:pre" font-size="36" font-weight="bold"><tspan x="4678" y="1565.28">000</tspan></text>
+<path id="Subtract_4" fill-rule="evenodd" clip-rule="evenodd" d="M3005 221C2958.61 221 2921 258.608 2921 305V515H3531V375C3531 348.49 3552.49 327 3579 327H3965V221H3005Z" fill="#2A7193"></path>
+<path id="r_14" d="M4808 221H4838C4865.61 221 4888 243.386 4888 271V277C4888 304.614 4865.61 327 4838 327H4808V221Z" fill="#2A7193"></path>
+<g id="g">
+<rect id="r_15" x="2921" y="1196" width="530" height="66" fill="#1C3C55"></rect>
+<text id="t_3" fill="#93E1FF" style="white-space:pre" font-size="32" font-weight="600" letter-spacing="-0.02em"><tspan x="3264.77" y="1243.25">SOURCE CREDIT</tspan></text>
+</g>
+<g id="g_2">
+<rect id="r_16" x="3476" y="1104" width="55" height="66" fill="#67CAF0"></rect>
+</g>
+<g id="g_3">
+<rect id="r_17" x="3476" y="1012" width="55" height="66" fill="#37A6D1"></rect>
+<rect id="r_18" x="2921" y="1012" width="530" height="66" fill="#37A6D1"></rect>
+<text id="t_4" fill="black" style="white-space:pre" font-size="32" font-weight="600" letter-spacing="-0.02em"><tspan x="3211.08" y="1059.25">AUXILIARY NETWORK</tspan></text>
+</g>
+<g id="g_4">
+<rect id="r_19" x="2921" y="920" width="530" height="66" fill="#2A7193"></rect>
+<text id="t_5" fill="black" style="white-space:pre" font-size="32" font-weight="600" letter-spacing="-0.02em"><tspan x="3172.25" y="967.25">NETWORK DATA PACKETS</tspan></text>
+</g>
+<g id="g_5">
+<rect id="r_20" x="3476" y="828" width="55" height="66" fill="#37A6D1"></rect>
+<rect id="r_21" x="2921" y="828" width="530" height="66" fill="#1C3C55"></rect>
+</g>
+<g id="g_6">
+<rect id="r_22" x="3476" y="736" width="55" height="66" fill="#2A7193"></rect>
+<rect id="r_23" x="2921" y="736" width="530" height="66" fill="#2A7193"></rect>
+<text id="t_6" fill="black" style="white-space:pre" font-size="32" font-weight="600" letter-spacing="-0.02em"><tspan x="3193.22" y="783.25">FUNCTION PARAMETER</tspan></text>
+</g>
+<g id="g_7">
+<rect id="r_24" x="2921" y="644" width="530" height="66" fill="#67CAF0"></rect>
+<text id="t_7" fill="black" style="white-space:pre" font-size="32" font-weight="600" letter-spacing="-0.02em"><tspan x="3253.8" y="691.25">PROGRAME TYPE</tspan></text>
+</g>
+<g id="g_8">
+<rect id="r_25" x="3476" y="552" width="55" height="66" fill="#93E1FF"></rect>
+<rect id="r_26" x="2921" y="552" width="530" height="66" fill="#93E1FF"></rect>
+<text id="t_8" fill="black" style="white-space:pre" font-size="32" font-weight="600" letter-spacing="-0.02em"><tspan x="3268.02" y="599.25">RUN PROGRAM</tspan></text>
+</g>
+</g>
+<text id="loaderTitle" fill="#93E1FF" style="white-space:pre" font-size="112" font-weight="100" letter-spacing="-0.025em"><tspan x="3984.84" y="323.375">APOD STARDATE MODULE</tspan></text>
+<g id="g_9">
+<path id="Subtract_5" fill-rule="evenodd" clip-rule="evenodd" d="M3618 391C3598.12 391 3582 407.118 3582 427V515H3717V479C3717 465.745 3727.75 455 3741 455H4070V391H3618Z" fill="#37A6D1"></path>
+<rect id="r_27" x="4118" y="391" width="520" height="64" fill="#2A7193"></rect>
+<path id="r_28" d="M4662 391H4690C4707.67 391 4722 405.327 4722 423C4722 440.673 4707.67 455 4690 455H4662V391Z" fill="#2A7193"></path>
+<text id="obsName-taR" fill="black" style="white-space:pre" font-size="40" font-weight="bold"><tspan x="4286.62" y="440.312">OBSERVATORY CODE 319</tspan></text>
+<text id="loadingTextEnd3" fill="#E7442A" style="white-space:pre" font-size="64" letter-spacing="0.02em"><tspan x="4115" y="1348.5">NASA APOD</tspan></text>
+<text id="loadingTextEnd2" fill="#E7442A" style="white-space:pre" font-size="64" letter-spacing="0.02em"><tspan x="3774" y="1348.5">DATA SOURCE:</tspan></text>
+<text id="loadingTextEnd1" fill="#67CAF0" style="white-space:pre" font-size="64" letter-spacing="0.1em"><tspan x="3978" y="1256.5">...</tspan></text>
+<text id="loadingTextEnd0" fill="#67CAF0" style="white-space:pre" font-size="64" letter-spacing="0.02em"><tspan x="3774" y="1256.5">LOADING</tspan></text>
+<text id="loadingTextStart1" fill="#93E1FF" style="white-space:pre" font-size="64"><tspan x="4012" y="612.5">...</tspan></text>
+<text id="loadingTextStart0" fill="#93E1FF" style="white-space:pre" font-size="64" letter-spacing="0.02em"><tspan x="3774" y="612.5">INITIATING</tspan></text>
+<g id="loadingTextSequence">
+<text id="t-taR" fill="#93E1FF" style="white-space:pre" font-size="64" letter-spacing="0.02em"><tspan x="3774" y="704.5">TITAN.DS_MODULE</tspan></text>
+<text id="obsProgram-taR" fill="#67CAF0" style="white-space:pre" font-size="64" letter-spacing="0.02em"><tspan x="3774" y="796.5">PROGRAM:</tspan></text>
+<text id="t-taR_2" fill="#67CAF0" style="white-space:pre" font-size="64" letter-spacing="0.02em"><tspan x="3774" y="888.5"><a href="https://geohack.toolforge.org/geohack.php?pagename=Perth_Observatory&#38;params=32.00781_S_116.13579_E_region:AU-WA_type:landmark_dim:250&#38;title=Perth+Observatory">];</a></tspan></text>
+<text id="t-taR_3" fill="#67CAF0" style="white-space:pre" font-size="64" letter-spacing="0.02em"><tspan x="3774" y="980.5">ROUTING // </tspan></text>
+<text id="obsLocation-taR" fill="#67CAF0" style="white-space:pre" font-size="64" letter-spacing="0.02em"><tspan x="4044" y="980.5">EARTH_PRIME</tspan></text>
+<text id="obsCoordinates-taR" fill="#67CAF0" style="white-space:pre" font-size="64" letter-spacing="0.02em"><tspan x="3774" y="1072.5">32&#xb0;00&#x2032;28&#x2033;S 116&#xb0;08&#x2032;09&#x2033;E</tspan></text>
+</g>
+<rect id="r_29" x="3689" y="552" width="28" height="66" fill="#37A6D1"></rect>
+<text id="20" fill="#37A6D1" style="white-space:pre" font-size="76" font-weight="600" letter-spacing="-0.03em"><tspan x="3612.96" y="617.594">20</tspan></text>
+<rect id="r_30" x="3689" y="737" width="28" height="64" fill="#37A6D1"></rect>
+<rect id="r_31" x="3689" y="921" width="28" height="64" fill="#37A6D1"></rect>
+<text id="451" fill="#2A7193" style="white-space:pre" font-size="76" font-weight="600" letter-spacing="-0.03em"><tspan x="3587.26" y="985.594">451</tspan></text>
+<rect id="r_32" x="3689" y="1013" width="28" height="64" fill="#2A7193"></rect>
+<rect id="r_33" x="3689" y="1105" width="28" height="64" fill="#2A7193"></rect>
+<text id="947" fill="#2A7193" style="white-space:pre" font-size="76" font-weight="600" letter-spacing="-0.03em"><tspan x="3583.03" y="1169.59">947</tspan></text>
+<rect id="r_34" x="3689" y="1197" width="28" height="64" fill="#1C3C55"></rect>
+<text id="88" fill="#1C3C55" style="white-space:pre" font-size="76" font-weight="600" letter-spacing="-0.03em"><tspan x="3613.93" y="1261.59">88</tspan></text>
+<rect id="r_35" opacity="0.5" x="3689" y="1289" width="28" height="64" fill="#E7442A"></rect>
+<text id="83" opacity="0.5" fill="#E7442A" style="white-space:pre" font-size="76" font-weight="600" letter-spacing="-0.03em"><tspan x="3613.78" y="1353.59">83</tspan></text>
+</g>
+</g>
+</g>
+</g>
+</svg>

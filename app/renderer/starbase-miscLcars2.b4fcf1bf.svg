@@ -1,0 +1,22 @@
+<svg width="1300" height="800" viewBox="0 0 1300 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="starbase-miscLcars2">
+<rect id="rect" opacity="0.6" width="1300" height="549" transform="matrix(1 0 0 -1 0 549)" fill="black"></rect>
+<path id="rnd-blink" fill-rule="evenodd" clip-rule="evenodd" d="M802 368H1201V428H802V368ZM1130 391H1164V415H1130V391ZM1106 395H1064V409H1106V395Z" fill="#1E2229"></path>
+<path id="rnd-blink_2" fill-rule="evenodd" clip-rule="evenodd" d="M741 368H430V428H741V368ZM704 391H687V419H704V391ZM590 403H674V419H590V403ZM572 395H537V419H572V395Z" fill="#2A7193"></path>
+<path id="rnd-blink_3" fill-rule="evenodd" clip-rule="evenodd" d="M1051 161C1034.43 161 1021 174.431 1021 191C1021 207.569 1034.43 221 1051 221H1171C1187.57 221 1201 207.569 1201 191C1201 174.431 1187.57 161 1171 161H1051ZM1164 198H1128V211H1164V198Z" fill="#6D748C"></path>
+<rect id="rnd" x="161" y="286" width="125" height="24" rx="12" fill="#2A7193"></rect>
+<g id="g-blink">
+<rect id="rnd_2" x="161" y="220" width="125" height="24" rx="12" fill="#2A7193"></rect>
+<rect id="rnd_3" x="161" y="174" width="125" height="24" rx="12" fill="#2A7193"></rect>
+</g>
+<path id="rnd_4" d="M127 170C127 156.745 137.745 146 151 146H413.5C421.784 146 428.5 152.716 428.5 161V169C428.5 177.284 435.216 184 443.5 184H926C939.255 184 950 194.745 950 208V313C950 326.255 939.255 337 926 337H151C137.745 337 127 326.255 127 313V170Z" stroke="#6D748C" stroke-width="8"></path>
+<line id="rnd-blink_4" x1="335" y1="260" x2="892" y2="260" stroke="#2A7193" stroke-width="100" stroke-dasharray="10 60"></line>
+<line id="rnd-blink_5" x1="630" y1="260" x2="892" y2="260" stroke="#2A7193" stroke-width="100" stroke-dasharray="30 40"></line>
+<line id="rnd-blink_6" x1="127" y1="403" x2="356" y2="403" stroke="#2A7193" stroke-width="50" stroke-dasharray="50 40"></line>
+<rect id="brightRndBar" y="549" width="1300" height="51" fill="#52596E"></rect>
+<rect id="brightRndBar_2" width="1300" height="32" fill="#52596E"></rect>
+<rect id="rect_2" x="8" y="97" width="1284" height="386" rx="60" stroke="#52596E" stroke-width="16"></rect>
+<rect id="rect_3" x="498" y="144" width="245" height="20" fill="#9EA5BA"></rect>
+<rect id="rect_4" x="811" y="144" width="82" height="20" fill="#6D748C"></rect>
+</g>
+</svg>

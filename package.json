@@ -1,0 +1,14 @@
+{
+  "name": "lcars-wallpaper",
+  "version": "1.0.0",
+  "private": true,
+  "description": "LCARS animated Windows wallpaper",
+  "scripts": {
+    "dev": "tauri dev",
+    "build": "tauri build",
+    "tauri": "tauri"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2"
+  }
+}
